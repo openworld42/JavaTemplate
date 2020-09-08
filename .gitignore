@@ -1,8 +1,13 @@
+# Project generated files
+config.xml
+myExample.xml
+
 # Compiled class file
 *.class
 
 # Log file
 *.log
+log.txt
 
 # BlueJ files
 *.ctxt
@@ -11,7 +16,7 @@
 .mtj.tmp/
 
 # Package Files #
-*.jar
+#*.jar
 *.war
 *.nar
 *.ear
