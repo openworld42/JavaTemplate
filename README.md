@@ -65,7 +65,7 @@ Last, but not least, don't forget the <b>GUI (Graphical User Interface)</b>:
 	<li><b>Gui</b>: the utility class for the graphical user interface (always wanted to center the main window at startup?
 		Error/Warning/Info dialog not braking down to 3 lines of code? Use Gui)</li>
 	<li><b>Dialog</b>: a specimen for a JDialog to start with, if needed in your application.</li>
-</ul><b>
+</ul>
 
 <p>Note: all files are <b>Apache 2.0 licensed</b>, therefore could be used as a starter for any other GPL/Apache project.<br/>
 (If you need just the source for a project setup, there is no need to refer to me as an author, but it would be a handsome gesture. 
