@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>JavaTemplate/CHANGELOG.md at master</title>
 	<meta name="description" content="JavaTemplate - template files for starting a new project setup" />
     <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub" />
 	<meta property="og:title" content="JavaTemplate" />
