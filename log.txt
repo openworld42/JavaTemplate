@@ -1,4 +1,0 @@
-2020-09-08 22:31:45 I reading configuration file: XXX
-2020-09-08 22:31:45 I reading finished
-
-obsolete
