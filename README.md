@@ -3,6 +3,8 @@
 Provides Java(TM) template files as an aid to help starting a new project.
 
 <p>To use it, simply copy over the files you want to use and delete the parts or files you don't need.</p>
+<p>Take less files from the [stable 1.0 branch](https://github.com/openworld42/JavaTemplate/tree/stable-1.0) if you dont 
+need the full <b>JavaTemplate</b>.</p>
 
 <p>Since it is a template for repeated needs during project setup, it does almost 
 nothing by itself, but runs a simple GUI (Graphical User Interface) to demonstrate its use.</p>
