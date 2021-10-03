@@ -4,18 +4,24 @@ Provides Java(TM) template files as an aid to help starting a new project.
 
 To use it, simply copy over the files you want to use and delete the parts or files you don't need.
 Take less files from the [stable 1.0.x branch](https://github.com/openworld42/JavaTemplate/tree/stable-1.0) if you dont 
-need the full <b>JavaTemplate</b>.
+need the full **JavaTemplate**.
 
-<p>Since it is a template for repeated needs during project setup, it does almost 
-nothing by itself, but runs a simple GUI (Graphical User Interface) to demonstrate its use.</p>
+Since it is a template for repeated needs during project setup, it does almost 
+nothing by itself, but runs a simple GUI (Graphical User Interface) to demonstrate its use.
 
-<p>I have been using/growing this for fast setups of my own projects over years, starting with 
+To run it: download the **templateVxxx.jar** file and call it from the command line using
+
+**java -jar templateVxxx.jar**
+
+where **xxx** is the current version. You need a Java runtime/JDK installed (**Linux**: simply use your package manager, **Windows/macOS/others**: download and install JDK from [here](https://openjdk.java.net/). 
+
+I have been using/growing this for fast setups of my own projects over years, starting with 
 500-1000 (or even 2500) lines of code from the beginning, concentrating on the project needs - and not 
 the repeated somewhat boring tasks. I tried to keep it simple but functional, 
-thus reducing unneccessary complexity.</p>
+thus reducing unneccessary complexity.
 
-<p>And yes, it's all source under your hood/needs, not a framework to live with. 
-It's a template, you modify it, delete the unneccessary parts, and start with some infrastructure from the very beginning. Use the saved time for other things you like.</p>
+And yes, it's all source under your hood/needs, not a framework to live with. 
+It's a template, you modify it, delete the unneccessary parts, and start with some infrastructure from the very beginning. Use the saved time for other things you like.
 
 ### Javadocs / API
 #### [Classes](docs/allclasses-index.html) |  [Packages](docs/allpackages-index.html)    | [Overview](docs/index.html)
@@ -69,7 +75,7 @@ Last, but not least, don't forget the <b>GUI (Graphical User Interface)</b>:
 	<li><b>Dialog</b>: a specimen for a JDialog to start with, if needed in your application.</li>
 </ul>
 
-<p>Note: all files are <b>Apache 2.0 licensed</b>, therefore could be used as a starter for any other GPL/Apache project.<br/>
+Note: all files are **Apache 2.0 licensed**, therefore could be used as a starter for any other GPL/Apache project.<br/>
 (If you need just the source for a project setup, there is no need to refer to me as an author, but it would be a handsome gesture. 
 I will NOT use my right of legal action for that, it's just my 2 cents for the mankind)</p>
 
