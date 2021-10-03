@@ -19,7 +19,7 @@
 
 <h3>Changes since 1.0.1</h3>
 <ul>
-	<li>Changelog added</li>
+	<li>Fixed some Doku</li>
 </ul>
 <p></p>
 
