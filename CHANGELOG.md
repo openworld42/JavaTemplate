@@ -19,7 +19,7 @@
 
 <h3>Changes since 1.0.1</h3>
 <ul>
-	<li>Fixed some Doku</li>
+	<li>Fixed some documentation & javadoc</li>
 </ul>
 <p></p>
 
