@@ -19,6 +19,7 @@
 
 <h3>Changes since 1.0.1</h3>
 <ul>
+	<li>Changed default look & feel to "Nimbus"</li>
 	<li>Fixed some documentation & javadoc</li>
 </ul>
 <p></p>
