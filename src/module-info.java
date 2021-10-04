@@ -1,0 +1,1 @@
+module JavaTemplate {exports template;exports template.ui;exports template.xml;requires java.desktop;requires java.xml;}
