@@ -27,8 +27,9 @@ import java.util.*;
  * 
  * Messages can have parameters, ordered by a number:<br/>
  * <pre>
- *     DAD_SAYING("I can feel $(2) disturbance in the $(1)", "force", 1),
- *     
+ *     DAD_SAYING("I can feel $(2) disturbance in the $(1)"),
+ *     and
+ *     Msg.get(DAD_SAYING, "force", 1);
  *     results to "I can feel 1 disturbance in the force"
  * </pre>
  *
