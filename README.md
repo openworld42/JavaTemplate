@@ -15,7 +15,7 @@ where **xxx** is the current version. You need a Java runtime/JDK installed (**L
 
 I have been using/growing this for fast setups of my own projects over years, starting with 
 500-1000 (or even 2500) lines of code from the beginning, concentrating on the project needs - and not 
-the repeated somewhat boring tasks. I tried to keep it simple but functional, 
+repeat the somewhat boring tasks. I tried to keep it simple but functional, 
 thus reducing unneccessary complexity.
 
 And yes, it's all source under your hood/needs, not a framework to live with. 
