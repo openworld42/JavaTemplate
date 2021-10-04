@@ -20,6 +20,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 import javax.swing.*;
+import javax.swing.UIManager.*;
 
 import template.*;
 import template.xml.*;
@@ -248,7 +249,14 @@ public class MainView extends JFrame implements ActionListener {
 	 */
 	private void initFrame() throws Exception {
 		
-		UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+    	UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());	// in case Nimbus is not found
+    	for (LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
+    		if ("Nimbus".equals(info.getName())) {
+    			UIManager.setLookAndFeel(info.getClassName());
+    			break;
+    		}
+    	}
+
  		mainPanel = new JPanel();
  		mainPanel.setLayout(new BorderLayout());
 		getContentPane().add(mainPanel, BorderLayout.CENTER);
