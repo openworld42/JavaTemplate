@@ -5,6 +5,10 @@ Details to start with: [README.md](https://github.com/openworld42/JavaTemplate/b
 
 ## v1.1.0
 
+### Fixes
+
+* links to javadocs in README.md not working, Github shows HTML in raw mode
+
 ### Features/Enhancements
 
 * changed default look & feel to "Nimbus" (may be configured in config.xml)
@@ -18,5 +22,4 @@ Details to start with: [README.md](https://github.com/openworld42/JavaTemplate/b
 * upload of 1st version (17 classes, javadoc, README.md, ~3200 loc)
 * Previous changes made to **XmlExample**
 * Previous enhancements of the documentation
-
 
