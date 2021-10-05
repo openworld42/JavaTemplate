@@ -5,11 +5,9 @@ Details to start with: [README.md](https://github.com/openworld42/JavaTemplate/b
 
 ## v1.1.0
 
-### Fixes
-
 ### Features/Enhancements
 
-* Changed default look & feel to "Nimbus" (may be configured in config.xml)
+* changed default look & feel to "Nimbus" (may be configured in config.xml)
 * several documentation/javadoc enhancements, markup updated
 
 ## v1.0.1
