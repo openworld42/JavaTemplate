@@ -1,39 +1,22 @@
-# JavaTemplate
 
-Provides Java(TM) template files as an aid to help starting a new project.
+<body>
+<p>This template provides Java(TM) template files as an aid to help starting a new project.</p>
 
-To use it, simply copy over the files you want to use and delete the parts or files you don't need.
-Take less files from the [stable 1.0.x branch](https://github.com/openworld42/JavaTemplate/tree/stable-1.0) if you dont 
-need the full **JavaTemplate**.
+<p>To use it, simply copy over the files you want to use and delete the parts or files you don't need.</p>
 
-Since it is a template for repeated needs during project setup, it does almost 
-nothing by itself, but runs a simple GUI (Graphical User Interface) to demonstrate its use.
+<p>Since it is a template for repeated needs during project setup, it does almost 
+nothing by itself, but runs a simple GUI (Graphical User Interface) to demonstrate its use.</p>
 
-To run it: download the **templateVxxx.jar** file and call it from the command line using
-
-**java -jar templateVxxx.jar**
-
-where **xxx** is the current version. You need a Java runtime/JDK installed (**Linux**: simply use your package manager, **Windows/macOS/others**: download and install JDK from [here](https://openjdk.java.net/)). 
-
-I have been using/growing this for fast setups of my own projects over years, starting with 
+<p>I have been using/growing this for fast setups of my own projects over years, starting with 
 500-1000 (or even 2500) lines of code from the beginning, concentrating on the project needs - and not 
-repeat the somewhat boring tasks. I tried to keep it simple but functional, 
-thus reducing unneccessary complexity.
+the repeated somewhat boring tasks. I tried to keep it simple but functional, 
+thus reducing unneccessary complexity.</p>
 
-And yes, it's all source under your hood/needs, not a framework to live with. 
-It's a template, you modify it, delete the unneccessary parts, and start with some infrastructure from the very beginning. Use the saved time for other things you like.
+<p>And yes, it's all source under your hood/needs, not a framework to live with. 
+It's a template, you modify it, delete the unneccessary parts, and start with some infrastructure from
+the very beginning. Use the saved time for other things you like.</p>
 
-### Javadocs / API
-Download (or clone) the JavaTemplate project, if downloaded as a zip file extract it. Open the API with your browser:
-
-**Classes**: docs/allclasses-index.html
-
-**Packages**: docs/allpackages-index.html
-
-**Overview**: docs/index.html
-
-The **API** contains:
-
+<b>It contains:</b><br/>
 <ul>
 	<li><b>Main</b>: an application entry class catching all unexpected Exceptions, starting a GUI (can be deleted), with logging and 
 		command line option parsing. Properties (like last window positions) are included.</li>
@@ -42,7 +25,8 @@ The **API** contains:
 	<li><b>CommandLineArgs</b>: a specimen for command line options and the parsing.</li>
 	<li><b>Usage</b>: the usual -h --help output and other options specimen (documentation is very often underestimated ;-).</li>
 	<li><b>Logger</b>: a simple logging class (yes, I know Log4J, of course), but I like the simple things under my hood. 
-		One needs rarely the full complexity (if so, it is easy to start with Logger and use it as a wrapper when something is going to get big).</li>
+		One needs rarely the full complexity (if so, it is easy to start with Logger and use it as a 
+		wrapper when something is going to get big).</li>
 	<li><b>Version</b>: a simple version (release) class for version management.</li>
 	<li><b>Msg</b> and <b>Message</b>: a good start for a possible distribution of other languages/labels/tags, with fair cost at 
 		the beginning of a new project. Add files for other languages later - with almost no changes to the code.</li>
@@ -59,15 +43,14 @@ The **API** contains:
 		if you have any suggestions on often needed items: provide useful methods/ideas - welcome on board (Apache license!).</li>
 	<li><b>Parser</b>: a text file parser specimen with line numbers (helps debugging a lot), tokenize items to lists, and more.</li>
 	<li>your 2 cents may go here: ...</li>
-</ul>
-
+</ul><br/>
 <b>XML</b> of course, nowadays:
 <ul>
-	<li><b>XmlWriter</b>: a simple way to serialize things/objects to a XML file (quick method).</li>
+	<li><b>XmlWriter</b>: a simple way to serialize things/objects to an XML file (quick method).</li>
 	<li><b>XmlWritable</b>: an interface an object may implement to make it writable to XML using XmlWriter.</li>
 	<li><b>XML parser</b>: a specimen</li>
 	<li><b>XmlExample</b>: a specimen for a XML turnaround, writing out some objects and reading them back.</li>
-</ul>`
+</ul><br/>
 Last, but not least, don't forget the <b>GUI (Graphical User Interface)</b>:
 <ul>
 	<li><b>MainView</b> (swing based): a main window specimen with almost everything to delete out if not needed. 
@@ -82,12 +65,10 @@ Last, but not least, don't forget the <b>GUI (Graphical User Interface)</b>:
 	<li><b>Dialog</b>: a specimen for a JDialog to start with, if needed in your application.</li>
 </ul>
 
-Note: all files are **Apache 2.0 licensed**, therefore could be used as a starter for any other GPL/Apache project.<br/>
+<p>Note: all files are <b>Apache 2.0 licensed</b>, therefore could be used as a starter for any other GPL/Apache project.<br/>
 (If you need just the source for a project setup, there is no need to refer to me as an author, but it would be a handsome gesture. 
 I will NOT use my right of legal action for that, it's just my 2 cents for the mankind)</p>
 
 Author: Heinz Silberbauer
 
-
-
-
+</body>
