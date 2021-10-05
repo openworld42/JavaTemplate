@@ -143,8 +143,8 @@ public class Main {
 		}
         
         // if there is logging in this project, you have to close the Logger
-		Logger.close();
-
-        System.out.println("\n" + APP_NAME + ", bye.");
+        // uncomment this if there is no GUI
+//		Logger.close();
+//      System.out.println("\n" + APP_NAME + ", bye.");
 	}
 }
