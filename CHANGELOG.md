@@ -3,9 +3,14 @@
 
 Details to start with: [README.md](https://github.com/openworld42/JavaTemplate/blob/master/README.md)
 
-### Changes since 1.0
+## v1.1.0
 
-* several documentation enhancements, markup updated
+### Fixes
+
+### Features/Enhancements
+
+* Changed default look & feel to "Nimbus" (may be configured in config.xml)
+* several documentation/javadoc enhancements, markup updated
 
 ## v1.0.1
 
