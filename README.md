@@ -22,9 +22,16 @@ And yes, it's all source under your hood/needs, not a framework to live with.
 It's a template, you modify it, delete the unneccessary parts, and start with some infrastructure from the very beginning. Use the saved time for other things you like.
 
 ### Javadocs / API
-#### [Classes](docs/allclasses-index.html) |  [Packages](docs/allpackages-index.html)    | [Overview](docs/index.html)
+Download (or clone) the JavaTemplate project, if downloaded as a zip file extract it. Open the API with your browser:
 
-<b>It contains:</b>
+**Classes**: docs/allclasses-index.html
+
+**Packages**: docs/allpackages-index.html
+
+**Overview**: docs/index.html
+
+The **API** contains:
+
 <ul>
 	<li><b>Main</b>: an application entry class catching all unexpected Exceptions, starting a GUI (can be deleted), with logging and 
 		command line option parsing. Properties (like last window positions) are included.</li>
