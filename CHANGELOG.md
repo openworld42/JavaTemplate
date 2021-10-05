@@ -24,3 +24,4 @@ Details to start with: [README.md](https://github.com/openworld42/JavaTemplate/b
 * Previous enhancements of the documentation
 
 
+
