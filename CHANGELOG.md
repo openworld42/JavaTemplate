@@ -7,6 +7,7 @@ Details to start with: [README.md](https://github.com/openworld42/JavaTemplate/b
 
 ### Fixes
 
+* closing Logger and exit message when running with GUI
 * links to javadocs in README.md not working, Github shows HTML in raw mode
 
 ### Features/Enhancements
