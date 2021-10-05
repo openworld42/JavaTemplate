@@ -23,6 +23,7 @@ public class CommandLineArgs {
 
 	private boolean isValid;
 	private int cliIndex;
+	private boolean isVerbose = true;
 	
 	// TODO implement getter for the options you define, if needed
 	private boolean hasTOption;
@@ -52,6 +53,9 @@ public class CommandLineArgs {
             } else if (args[cliIndex].equals("-v")) {
             	Version.print();
             	System.exit(0);
+            } else if (args[cliIndex].equals("-q")) {
+            	// qiet option
+            	isVerbose = false;
             } else if (args[cliIndex].equals("-t")) {
             	// simple option
             	hasTOption = true;
@@ -84,5 +88,15 @@ public class CommandLineArgs {
 	public boolean isValid() {
 		
 		return isValid;
+	}
+
+	/**
+	 * Flag for verbose messages to System.out.
+	 * 
+	 * @return the isVerbose
+	 */
+	public boolean isVerbose() {
+		
+		return isVerbose;
 	}
 }

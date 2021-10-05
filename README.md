@@ -70,11 +70,12 @@ The **API** contains:
 </ul>`
 Last, but not least, don't forget the <b>GUI (Graphical User Interface)</b>:
 <ul>
+	<li><b>Look&Feel</b>: is configurable, or can be set to a fixed one</li>
 	<li><b>MainView</b> (swing based): a main window specimen with almost everything to delete out if not needed. 
 		Contains code snippets for ToolBar, Menu, status line, some widgets, listeners, action handling/dispatching, focus, window closing actions,
 		simple dialog examples (file chooser, question input, etc.), and yes, layout (e.g. an easy way to use GrindBagLayout!).</li>
 	<li><b>Gbc</b>: ride the GridBagConstraints horse for GrindBagLayout in a kingsman way - short/fast learning curve, 
-		index placed (x/y placement), automated insets for a good look/feel of the widgets, anchoring (e.g. "NW t" for 
+		index placed (grid x/y placement), automated insets for a good look/feel of the widgets, anchoring (e.g. "NW t" for 
 		north-west anchor with automated (wider) inset at the top), 
 		filler() to drag/push widgets and more: take a look for its use in MainView. No drawing tools needed anymore.</li>
 	<li><b>Gui</b>: the utility class for the graphical user interface (always wanted to center the main window at startup?
