@@ -172,6 +172,8 @@ public class XmlExample {
 	
 	/** A wrapped HashMap to write it to a XML file, we can also wrap collections or other objects */
 	class XmlWrappedHashMap extends HashMap<String, String> {
+
+		private static final long serialVersionUID = 1L;
 		
 		public static final String XML_KEY = "key";
 		public static final String XML_VALUE = "value";

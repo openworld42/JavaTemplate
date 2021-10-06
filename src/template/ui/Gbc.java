@@ -104,6 +104,8 @@ import javax.swing.*;
  */
 public class Gbc extends GridBagConstraints {
 
+	private static final long serialVersionUID = 1L;
+
     // constants
 
     public static final char TOP = 't';
