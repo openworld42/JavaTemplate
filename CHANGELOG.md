@@ -12,6 +12,7 @@ Details to start with: [README.md](https://github.com/openworld42/JavaTemplate/b
 
 ### Features/Enhancements
 
+* Icon for the application, to demonstrate loading of resources
 * changed default look & feel to "Nimbus" (may be configured in config.xml), display all
 available look & feels
 * several documentation/javadoc enhancements, markup updated

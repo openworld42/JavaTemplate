@@ -50,7 +50,8 @@ public class MainView extends JFrame implements ActionListener {
 	public MainView() throws Exception {
 
 		super(Main.APP_NAME);				// or setTitle(XXX);
-		
+		ImageIcon icon = new ImageIcon("src/images/size24x24/applications-utilities.png");
+		setIconImage(icon.getImage());
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);		// or
         addWindowListener(new WindowAdapter() {
             public void windowClosed(WindowEvent event) {

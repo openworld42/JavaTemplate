@@ -38,6 +38,8 @@ public class Dialog extends JDialog {
 
 		this.parentFrame = parentFrame;
 		setTitle("my dialog");
+		ImageIcon icon = new ImageIcon("src/images/size24x24/applications-utilities.png");
+		setIconImage(icon.getImage());
 		setModal(true);
 		setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 		// create a panel for the components
