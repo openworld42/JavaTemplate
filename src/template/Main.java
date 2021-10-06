@@ -31,6 +31,7 @@ public class Main {
 	public static final String APP_NAME = "XXX";
 
 	private static Main instance;				// the one and only instance of this application
+	
 	private CommandLineArgs args;				// command line arguments, if needed
 	private AppProperties properties; 			// application properties (e.g. a config file), if needed
 	private boolean isVerbose; 					// verbose messages to System.out
