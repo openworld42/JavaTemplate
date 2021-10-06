@@ -30,6 +30,8 @@ import template.xml.*;
  */
 public class MainView extends JFrame implements ActionListener {
 
+	private static final long serialVersionUID = 1L;
+
 	// constants
 
 	public final static String EXIT = "Exit";

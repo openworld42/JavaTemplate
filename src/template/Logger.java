@@ -107,12 +107,12 @@ public class Logger {
 	 * @param clazz			the calling class 
 	 * @param message
 	 */
-	public static void error(Class clazz, String message) {
+	public static void error(Class<?> clazz, String message) {
 
 		error(clazz.getSimpleName() + ": " + message);
 	}
 
-		/**
+	/**
 	 * Log an error, usually caused by an exception.
 	 * 
 	 * @param message
@@ -200,7 +200,7 @@ public class Logger {
 	 * @param clazz			a calling class 
 	 * @param message
 	 */
-	public static void info(Class clazz, String message) {
+	public static void info(Class<?> clazz, String message) {
 
 		info(clazz.getSimpleName() + ": " + message);
 	}
@@ -215,7 +215,7 @@ public class Logger {
 
 		try {
 			writer = new BufferedWriter(new FileWriter(logFilename), BUFFER_SIZE);
-			instance.logFilename = logFilename;
+			Logger.logFilename = logFilename;
 		} catch (IOException e) {
 			e.printStackTrace();
 			throw new RuntimeException("Error initilizing Logger: " + e.getMessage());
@@ -227,7 +227,7 @@ public class Logger {
 	 */
 	public static void logErrorsToConsole(boolean logErrorsToConsole) {
 
-		instance.logErrorsToConsole = logErrorsToConsole;
+		Logger.logErrorsToConsole = logErrorsToConsole;
 	}
 
 	/**
@@ -269,7 +269,7 @@ public class Logger {
 	 * @param clazz			a calling class 
 	 * @param message
 	 */
-	public static void warning(Class clazz, String message) {
+	public static void warning(Class<?> clazz, String message) {
 
 		warning(clazz.getSimpleName() + ": " + message);
 	}
