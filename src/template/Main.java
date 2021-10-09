@@ -73,6 +73,8 @@ public class Main {
 		Util.verbose("Starting GUI ...");		// is displayed on System.out only if the verbos flag is on
 		
 		// if the application has a GUI, start it now ...
+		System.setProperty("awt.useSystemAAFontSettings","on");	// render fonts in a better way
+
 		MainView mainView = new MainView();
 	}
 
