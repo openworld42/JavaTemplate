@@ -19,11 +19,11 @@
 
 <h3>Changes since 1.0.2</h3>
 <ul>
-	<li>Set a better font rendering</li>
 </ul>
 
-<h3>Changes since 1.0.1</h3>
+<h3>v1.0.2</h3>
 <ul>
+	<li>Set a better font rendering</li>
 	<li>Changed default look & feel to "Nimbus"</li>
 	<li>Fixed some documentation & javadoc</li>
 </ul>
