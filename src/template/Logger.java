@@ -215,7 +215,7 @@ public class Logger {
 
 		try {
 			writer = new BufferedWriter(new FileWriter(logFilename), BUFFER_SIZE);
-			instance.logFilename = logFilename;
+			Logger.logFilename = logFilename;
 		} catch (IOException e) {
 			e.printStackTrace();
 			throw new RuntimeException("Error initilizing Logger: " + e.getMessage());
