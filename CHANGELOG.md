@@ -7,9 +7,14 @@ Details to start with: [README.md](https://github.com/openworld42/JavaTemplate/b
 
 ### Fixes
 
+* closing Logger and exit message when running with GUI
+* links to javadocs in README.md not working, Github shows HTML in raw mode
+
 ### Features/Enhancements
 
-* Changed default look & feel to "Nimbus" (may be configured in config.xml)
+* Icon for the application, to demonstrate loading of resources
+* changed default look & feel to "Nimbus" (may be configured in config.xml), display all
+available look & feels
 * several documentation/javadoc enhancements, markup updated
 
 ## v1.0.1
@@ -20,5 +25,6 @@ Details to start with: [README.md](https://github.com/openworld42/JavaTemplate/b
 * upload of 1st version (17 classes, javadoc, README.md, ~3200 loc)
 * Previous changes made to **XmlExample**
 * Previous enhancements of the documentation
+
 
 

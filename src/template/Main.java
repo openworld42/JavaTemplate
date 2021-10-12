@@ -31,8 +31,10 @@ public class Main {
 	public static final String APP_NAME = "XXX";
 
 	private static Main instance;				// the one and only instance of this application
+	
 	private CommandLineArgs args;				// command line arguments, if needed
 	private AppProperties properties; 			// application properties (e.g. a config file), if needed
+	private boolean isVerbose; 					// verbose messages to System.out
 
 	/**
 	 * Construction.
@@ -48,7 +50,9 @@ public class Main {
 		args = new CommandLineArgs(arguments);
 		if (!args.isValid()) {
 			Usage.exit(1);
-		} 
+		}
+		
+		isVerbose = args.isVerbose();
 
 		// read in the project XML properties from a configuration file (if the application has properties)
 		// if the file does not exist, it will be created with your default properties
@@ -66,8 +70,12 @@ public class Main {
 
 		// TODO  your stuff
 
+		Util.verbose("Starting GUI ...");		// is displayed on System.out only if the verbose flag is on
+		
 		// if the application has a GUI, start it now ...
-		MainView mainView = new MainView();
+		System.setProperty("awt.useSystemAAFontSettings","on");	// render fonts in a better way with this property
+
+		new MainView();
 	}
 
 	/**
@@ -97,11 +105,54 @@ public class Main {
 	}
 
 	/**
+	 * Gets a property.
+	 * 
+	 * @param key
+	 * @return the property value
+	 */
+	public static String getProperty(String key) {
+		
+		return instance.properties.getProperty(key);
+	}
+
+	/**
+	 * Gets an boolean property (a flag).
+	 * 
+	 * @param key
+	 * @return true id the value is "true", false otherwise
+	 */
+	public static boolean getPropertyBool(String key) {
+		
+		return instance.properties.getPropertyBool(key);
+	}
+
+	/**
+	 * Gets an integer property.
+	 * 
+	 * @param key
+	 * @return the integer value
+	 */
+	public static int getPropertyInt(String key) {
+		
+		return Integer.parseInt(instance.properties.getProperty(key));
+	}
+
+	/**
 	 * @return the main instance of this application
 	 */
 	public Main instance() {
 		
 		return instance;
+	}
+
+	/**
+	 * Flag for verbose messages sent to System.out.
+	 * 
+	 * @return true, if in verbose mode, false otherwise
+	 */
+	public static boolean isVerbose() {
+		
+		return instance.isVerbose;
 	}
 
 	/**
@@ -143,8 +194,8 @@ public class Main {
 		}
         
         // if there is logging in this project, you have to close the Logger
-		Logger.close();
-
-        System.out.println("\n" + APP_NAME + ", bye.");
+        // uncomment this if there is no GUI
+//		Logger.close();
+//      System.out.println("\n" + APP_NAME + ", bye.");
 	}
 }

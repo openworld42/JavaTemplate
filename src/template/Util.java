@@ -377,4 +377,16 @@ public class Util {
 			}
 		}
 	}
+
+	/**
+     * Do System.out.println of a text string to console, if the verbose flag property is on (default).
+     *
+     * @param text the text string to be displayed
+ 	 */
+	public static void verbose(String text) {
+
+		if (Main.isVerbose()) {
+			System.out.println(text);
+		}
+	}
 }

@@ -1,6 +1,6 @@
 # JavaTemplate
 
-Provides Java(TM) template files as an aid to help starting a new project.
+Provides Java(TM) template files as an aid to start a new project.
 
 To use it, simply copy over the files you want to use and delete the parts or files you don't need.
 Take less files from the [stable 1.0.x branch](https://github.com/openworld42/JavaTemplate/tree/stable-1.0) if you dont 
@@ -24,9 +24,16 @@ And yes, it's all source under your hood/needs, not a framework to live with.
 It's a template, you modify it, delete the unneccessary parts, and start with some infrastructure from the very beginning. Use the saved time for other things you like.
 
 ### Javadocs / API
-#### [Classes](docs/allclasses-index.html) |  [Packages](docs/allpackages-index.html)    | [Overview](docs/index.html)
+Download (or clone) the JavaTemplate project, if downloaded as a zip file extract it. Open the API with your browser:
 
-<b>It contains:</b>
+**Classes**: docs/allclasses-index.html
+
+**Packages**: docs/allpackages-index.html
+
+**Overview**: docs/index.html
+
+The **API** contains:
+
 <ul>
 	<li><b>Main</b>: an application entry class catching all unexpected Exceptions, starting a GUI (can be deleted), with logging and 
 		command line option parsing. Properties (like last window positions) are included.</li>
@@ -63,11 +70,12 @@ It's a template, you modify it, delete the unneccessary parts, and start with so
 </ul>`
 Last, but not least, don't forget the <b>GUI (Graphical User Interface)</b>:
 <ul>
+	<li><b>Look&Feel</b>: is configurable, or can be set to a fixed one</li>
 	<li><b>MainView</b> (swing based): a main window specimen with almost everything to delete out if not needed. 
 		Contains code snippets for ToolBar, Menu, status line, some widgets, listeners, action handling/dispatching, focus, window closing actions,
 		simple dialog examples (file chooser, question input, etc.), and yes, layout (e.g. an easy way to use GrindBagLayout!).</li>
 	<li><b>Gbc</b>: ride the GridBagConstraints horse for GrindBagLayout in a kingsman way - short/fast learning curve, 
-		index placed (x/y placement), automated insets for a good look/feel of the widgets, anchoring (e.g. "NW t" for 
+		index placed (grid x/y placement), automated insets for a good look/feel of the widgets, anchoring (e.g. "NW t" for 
 		north-west anchor with automated (wider) inset at the top), 
 		filler() to drag/push widgets and more: take a look for its use in MainView. No drawing tools needed anymore.</li>
 	<li><b>Gui</b>: the utility class for the graphical user interface (always wanted to center the main window at startup?

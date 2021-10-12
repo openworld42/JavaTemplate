@@ -36,8 +36,12 @@ public class AppProperties extends Properties {
 	public static final String VERSION_MINOR = "version.minor";
 	public static final String VERSION_RELEASE = "version.release";
 	
-	public static final String KEY1 = "key1";				// TODO  
-	public static final String KEY_INT = "keyInt";			// TODO  
+	public static final String LOOK_AND_FEEL = "lookandfeel"; 
+	public static final String VERBOSE = "verbose"; 
+	
+	
+	public static final String KEY1 = "key1";				// TODO: delete  
+	public static final String KEY_INT = "keyInt";			// TODO: delete, just an integer example  
 	
 	private String pathname;
 	private boolean useXmlFile;
@@ -84,7 +88,10 @@ public class AppProperties extends Properties {
 		setProperty(VERSION_MAJOR, Version.getMajor());
 		setProperty(VERSION_MINOR, Version.getMinor());
 		setProperty(VERSION_RELEASE, Version.getRelease());
-		setProperty(KEY1, "value1");					// TODO
+		
+		setProperty(LOOK_AND_FEEL, "Nimbus");
+		setProperty(VERBOSE, "false");
+		
 		setProperty(KEY_INT, 42);						// TODO
 	}
 
@@ -94,6 +101,17 @@ public class AppProperties extends Properties {
 	public String getPathname() {
 	
 		return pathname;
+	}
+
+	/**
+	 * Gets an boolean property (a flag).
+	 * 
+	 * @param key
+	 * @return true id the value is "true", false otherwise
+	 */
+	public boolean getPropertyBool(String key) {
+		
+		return Boolean.parseBoolean(getProperty(key));
 	}
 
 	/**
