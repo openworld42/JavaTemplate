@@ -28,7 +28,7 @@
 	<property name="dir.javadoc" value="javadoc"/>
   
 	<target name="init">
-		<!-- Create a time stamp -->
+		<!-- Create the time stamp -->
 		<tstamp/>
 		<echo>
 			appname: ${appname}
