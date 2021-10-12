@@ -3,3 +3,5 @@
 /config.xml
 /log.txt
 /bin/
+/.gitignore/
+/.metadata/

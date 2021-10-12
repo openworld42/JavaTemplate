@@ -41,6 +41,7 @@ public class Usage {
         System.out.println("java package.Main -t TEST_NUMBER [-url CONNECTION_URL]");
         System.out.println("    -h          ... display this message and exit");
         System.out.println("    -v          ... diplay version and exit");
+        System.out.println("    -q          ... quiet, no verbose messages");
         System.out.println("    -t          ... do TTT");
         System.out.println("    -url <url>  ... use XY");
         System.out.println("");

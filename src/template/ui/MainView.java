@@ -30,6 +30,8 @@ import template.xml.*;
  */
 public class MainView extends JFrame implements ActionListener {
 
+	private static final long serialVersionUID = 1L;
+
 	// constants
 
 	public final static String EXIT = "Exit";
@@ -50,7 +52,8 @@ public class MainView extends JFrame implements ActionListener {
 	public MainView() throws Exception {
 
 		super(Main.APP_NAME);				// or setTitle(XXX);
-		
+		ImageIcon icon = new ImageIcon("src/images/size24x24/applications-utilities.png");
+		setIconImage(icon.getImage());
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);		// or
         addWindowListener(new WindowAdapter() {
             public void windowClosed(WindowEvent event) {
@@ -250,13 +253,19 @@ public class MainView extends JFrame implements ActionListener {
 	private void initFrame() throws Exception {
 		
     	UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());	// in case Nimbus is not found
+    	String lookAndFeel = Main.getProperty(AppProperties.LOOK_AND_FEEL);
     	for (LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
-    		if ("Nimbus".equals(info.getName())) {
+    		if (lookAndFeel.equals(info.getName())) {
     			UIManager.setLookAndFeel(info.getClassName());
     			break;
     		}
     	}
-
+    	
+    	// TODO  if you want to see all the available look and feels, just uncomment this - else delete it
+    	for (LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
+    		System.out.println("Look&feel found: " + info.getName());
+    	}
+    	
  		mainPanel = new JPanel();
  		mainPanel.setLayout(new BorderLayout());
 		getContentPane().add(mainPanel, BorderLayout.CENTER);
