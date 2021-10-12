@@ -75,7 +75,7 @@ public class Main {
 		// if the application has a GUI, start it now ...
 		System.setProperty("awt.useSystemAAFontSettings","on");	// render fonts in a better way
 
-		MainView mainView = new MainView();
+		new MainView();
 	}
 
 	/**
