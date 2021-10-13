@@ -27,8 +27,6 @@ import javax.swing.*;
  */
 public class Dialog extends JDialog {
 
-	private static final long serialVersionUID = 1L;
-	
 	private JFrame parentFrame;
 
 	/**
