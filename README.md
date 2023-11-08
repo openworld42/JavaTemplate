@@ -83,11 +83,12 @@ Last, but not least, don't forget the <b>GUI (Graphical User Interface)</b>:
 	<li><b>Dialog</b>: a specimen for a JDialog to start with, if needed in your application.</li>
 </ul>
 
-Note: all files are **Apache 2.0 licensed**, therefore could be used as a starter for any other GPL/Apache project.<br/>
+Note: all files are **Apache 2.0 licensed**, therefore could be used as a starter for any other GPL/Apache/FOSS project, as well as the use of individual classes.<br/>
+
 (If you need just the source for a project setup, there is no need to refer to me as an author, but it would be a handsome gesture. 
 I will NOT use my right of legal action for that, it's just my 2 cents for the mankind)</p>
 
-Author: Heinz Silberbauer
+Author: Heinz Silberbauer  (You like it? Spend a Github Star to motivate me :whale:)
 
 
 
