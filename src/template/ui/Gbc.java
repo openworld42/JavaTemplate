@@ -102,22 +102,25 @@ import javax.swing.*;
  *
  * @author Heinz Silberbauer
  */
+@SuppressWarnings("serial")
 public class Gbc extends GridBagConstraints {
-
-	private static final long serialVersionUID = 1L;
 	
     // constants
 
+	/** the token for top side placement */
     public static final char TOP = 't';
+	/** the token for left side placement */
     public static final char LEFT = 'l';
+	/** the token for bottom side placement */
     public static final char BOTTOM = 'b';
+	/** the token for right side placement */
     public static final char RIGHT = 'r';
     
+	/** the default insets, unless set to other values */
 	public static final Insets DEFAULT_INSETS = new Insets(4, 4, 4, 4);
-
-    // static variables
-
-    private static int defaultInset = 4;
+	/** the default insets value for a component, unless set to another value */
+	private static int defaultInset = 4;
+	/** the default insets value for the borders, unless set to another value */
     private static int defaultBorderInset = 8;
 
     /**
@@ -253,7 +256,8 @@ public class Gbc extends GridBagConstraints {
      *
      * @param   direction   the direction character to be searched for
      * @param   tokens      may contain one or more direction characters
-     *      for border spacing
+     *      				for border spacing
+     * @return the default border inset
      */
     protected int checkForBorderInset(char direction, String tokens) {
 
@@ -272,7 +276,8 @@ public class Gbc extends GridBagConstraints {
      * The token string may be empty or <code>null</code>.
      *
      * @param   token       the token string containing zero or more
-     *      direction characters
+     *      				direction characters
+     * @return the default border inset
      */
     protected Insets createInsetsFrom(String token) {
 
