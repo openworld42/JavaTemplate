@@ -21,18 +21,22 @@ package template;
  */
 public class CommandLineArgs {
 
+
+	/** flag if all of the command line arguments are valid */
 	private boolean isValid;
+	/** the current index of the command line argument */
 	private int cliIndex;
+	/** flag if there will be verbose messages */
 	private boolean isVerbose = true;
-	
-	// TODO implement getter for the options you define, if needed
-	private boolean hasTOption;
+	/** example for an option T */
+	private boolean hasTOption;		// TODO implement getter for the options you define, if needed
+	/** an URL */
 	private String url;
 
 	/**
 	 * Construct CommandLineArgs using the command line arguments.
 	 * 
-	 * @param args 
+	 * @param args 		 		the arguments of the application
 	 */
 	public CommandLineArgs(String[] args) {
 

@@ -33,9 +33,10 @@ import java.util.*;
  */
 public class Msg {
 
-	private static Msg instance = new Msg();				// singleton instance
-
-	private EnumMap<Message, String> msgEnumMap;			// a map containing all messages
+	/** singleton instance */
+	private static Msg instance = new Msg();
+	/** a map containing all messages */
+	private EnumMap<Message, String> msgEnumMap;
 
 	/**
 	 * Singleton creation using hard coded messages.
@@ -46,6 +47,9 @@ public class Msg {
 	}
 
 	/**
+	 * Get a message.
+	 * 
+	 * @param msg			the key to get the (language dependent) message
 	 * @return the message by id (its Enumeration)
 	 */
 	public static String get(Message msg) {
@@ -55,6 +59,13 @@ public class Msg {
 
 	/**
 	 * @return the message with parameters by id (its Enumeration)
+	 */
+	/**
+	 * Get a message with replaced parameter arguments.
+	 * 
+	 * @param msg			the key to get the (language dependent) message
+	 * @param args			parameter arguments
+	 * @return the message with replaced parameters
 	 */
 	public static String get(Message msg, Object ... args) {
 

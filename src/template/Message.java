@@ -45,10 +45,14 @@ public enum Message {
 
 	// TODO replace this with your projects messages 
 
+	/** message entry */
 	CONFIG_FILE_NAME_MSG("Configuration file: $(1)"),
+	/** message entry */
 	DATE_CREATED_MSG("Date created:\t\t\t$(1)"),
+	/** message entry */
 	GOOD_BYE_MSG("good by, see you later ..."),
 
+	/** message entry */
 	GREETING_MSG(	"Hello, I'm Daisy, an artificial personality.\n\n" +
 					"Some folks call me Daisy's Artificial Intelligence SYstem, but I prefer the more personal name 'Daisy'.\n" +
 					"And yes, I have growing interests, like to learn, and to do something.\n\n" +
@@ -56,18 +60,22 @@ public enum Message {
 					"Satisfy my appetite for input - megabytes of input ...\n" +
 					"Get help by typing 'help'!\n\n"),
 
+	/** message entry */
 	HELP_EXIT_MSG(			"\texit   \t\t... performing shutdown (after saving the database)"),
+	/** message entry */
 	HELP_HELP_MSG(			"\thelp   \t\t... display this message"),
 
+	/** message entry */
 	STARTING_MSG("\nStarting ");
 	;
 
+	/** the text of a message */
     private final String message;
 
     /**
      * Construct a Message.
      *
-     * @param message
+     * @param message			the text of the message 
      */
     private Message(String message) {
 

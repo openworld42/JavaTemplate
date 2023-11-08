@@ -36,17 +36,26 @@ import java.util.*;
 //public class Logger extends java.util.logging.Logger {
 public class Logger {
 
+	/** using a large buffer size for logging*/
 	public static final int BUFFER_SIZE = 8 * 1024;	// make it big if writing large files ...
+	/** abbreviation for the line separator */
 	public static final String lineSep = System.lineSeparator();
+	/** the data format of logging messages */
 	public static final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss ");
 
+	/** the logger singleton instance */
 	private static final Logger instance = new Logger();
 
+	/** the current number of logging messages */
 	private static int logCount;
+	/** if true, error a displayed to the console too */
 	private static boolean logErrorsToConsole;
+	/** if true,  there are logging messages that are not persisted now */
 	private static boolean isDirty;
 
+	/** the logging file name */
 	private static String logFilename;
+	/** the writer */
 	private static BufferedWriter writer;
 
 	/**
@@ -84,7 +93,7 @@ public class Logger {
 	/**
 	 * Log an error.
 	 * 
-	 * @param message
+	 * @param message		the error message
 	 */
 	public static void error(String message) {
 
@@ -102,10 +111,10 @@ public class Logger {
 	}
 
 	/**
-	 * Log an error looking like "MyClass: <message>".
+	 * Log an error looking like "MyClass: _message_".
 	 * 
 	 * @param clazz			the calling class 
-	 * @param message
+	 * @param message		the error message
 	 */
 	public static void error(Class<?> clazz, String message) {
 
@@ -115,8 +124,8 @@ public class Logger {
 	/**
 	 * Log an error, usually caused by an exception.
 	 * 
-	 * @param message
-	 * @param e
+	 * @param message		the error message
+	 * @param e				the Throwable to display for the stacktrace
 	 */
 	public static void error(String message, Throwable e) {
 
@@ -180,7 +189,7 @@ public class Logger {
 	/**
 	 * Log an information message.
 	 * 
-	 * @param message
+	 * @param message		the information message
 	 */
 	public static void info(String message) {
 
@@ -195,10 +204,10 @@ public class Logger {
 	}
 
 	/**
-	 * Log an information message looking like "MyClass: <message>".
+	 * Log an information message looking like "MyClass: _message_".
 	 * 
 	 * @param clazz			a calling class 
-	 * @param message
+	 * @param message		the information message
 	 */
 	public static void info(Class<?> clazz, String message) {
 
@@ -209,7 +218,7 @@ public class Logger {
 	 * Initializes (opens) the log file.
 	 * An application has to call init() before writing anything to the log.
 	 * 
-	 * @param logFilename
+	 * @param logFilename		the name of the file to log
 	 */
 	public static void init(String logFilename) {
 
@@ -249,7 +258,7 @@ public class Logger {
 	/**
 	 * Log a warning message.
 	 *
-	 * @param message
+	 * @param message		the warning message
 	 */
 	public static void warning(String message) {
 
@@ -264,10 +273,10 @@ public class Logger {
 	}
 
 	/**
-	 * Log an warning message looking like "MyClass: <message>".
+	 * Log an warning message looking like "MyClass: _message_".
 	 * 
 	 * @param clazz			a calling class 
-	 * @param message
+	 * @param message		the warning message
 	 */
 	public static void warning(Class<?> clazz, String message) {
 

@@ -25,25 +25,33 @@ import java.util.*;
  * 
  * Note: Do not forget to handle additional properties if a new release is going to be rolled out.
  */
+@SuppressWarnings("serial")
 public class AppProperties extends Properties {
-
-	private static final long serialVersionUID = 1L;		// for the compiler
 	
 	// property keys
 	
-	public static final String VERSION = "version";
-	public static final String VERSION_MAJOR = "version.major";
-	public static final String VERSION_MINOR = "version.minor";
-	public static final String VERSION_RELEASE = "version.release";
+	/** version property key */
+	public static final String VERSION = "Version";
+	/** version property key */
+	public static final String VERSION_MAJOR = "Version.major";
+	/** version property key */
+	public static final String VERSION_MINOR = "Version.minor";
+	/** version property key */
+	public static final String VERSION_RELEASE = "Version.release";
 	
-	public static final String LOOK_AND_FEEL = "lookandfeel"; 
-	public static final String VERBOSE = "verbose"; 
-	
-	
+	/** the look-and-feel property key */
+	public static final String LOOK_AND_FEEL = "LookAndFeel"; 
+	/** the verbose property key */
+	public static final String VERBOSE = "Verbose"; 
+
+	/** key description */
 	public static final String KEY1 = "key1";				// TODO: delete  
+	/** key description */
 	public static final String KEY_INT = "keyInt";			// TODO: delete, just an integer example  
 	
+	/** the path to the properties file */
 	private String pathname;
+	/** if true, key/value pairs are loaded from a XML file */
 	private boolean useXmlFile;
 
 	/**
@@ -52,7 +60,7 @@ public class AppProperties extends Properties {
 	 * 
 	 * @param pathname			the path to the properties file
 	 * @param useXmlFile		if true, use loadFromXML(), key/value pairs using load() otherwise
-	 * @throws Exception
+	 * @throws Exception on unexpected exceptions
 	 */
 	public AppProperties(String pathname, boolean useXmlFile) throws Exception {
 
@@ -106,7 +114,7 @@ public class AppProperties extends Properties {
 	/**
 	 * Gets an boolean property (a flag).
 	 * 
-	 * @param key
+	 * @param key		the key of the property
 	 * @return true id the value is "true", false otherwise
 	 */
 	public boolean getPropertyBool(String key) {
@@ -117,7 +125,7 @@ public class AppProperties extends Properties {
 	/**
 	 * Gets an integer property.
 	 * 
-	 * @param key
+	 * @param key		the key of the property
 	 * @return the integer value
 	 */
 	public int getPropertyInt(String key) {
@@ -137,8 +145,8 @@ public class AppProperties extends Properties {
 	/**
 	 * Sets an integer property.
 	 * 
-	 * @param key
-	 * @param value
+	 * @param key		the key of the property
+	 * @param value		the value of the property
 	 */
 	public void setProperty(String key, int value) {
 		
@@ -148,8 +156,8 @@ public class AppProperties extends Properties {
 	/**
 	 * Store the properties to the key/value properties file, to persist them.
 	 * 
-	 * @throws IOException 
-	 * @throws FileNotFoundException 
+	 * @throws IOException on IO errors
+	 * @throws FileNotFoundException if the file was not found
 	 */
 	public void store() throws FileNotFoundException, IOException {
 		
@@ -160,10 +168,9 @@ public class AppProperties extends Properties {
 	/**
 	 * Store the properties to the XML properties file, to persist them.
 	 * 
-	 * @throws IOException 
-	 * @throws FileNotFoundException 
+	 * @throws IOException on IO errors
 	 */
-	public void storeToXML() throws FileNotFoundException, IOException {
+	public void storeToXML() throws IOException {
 		
 		File file = new File(pathname);
 		storeToXML(new FileOutputStream(file), "Version " + Version.getAsString());

@@ -22,16 +22,19 @@ import java.io.*;
  * Writes data (usually of an object) to a XML file.
  *
  * Note: it is the callers responsibility to close() the XmlWriter.
- *
- * @author Heinz Silberbauer
  */
 public class XmlWriter extends BufferedWriter {
 
-	public static final int BUFFER_SIZE = 16 * 1024;	// make it big, if writing large files ...
+	/** writing large files ... */
+	public static final int BUFFER_SIZE = 16 * 1024;
 
+	/** the file name to write on */
 	private String fileName;
+	/** the indentation level */
 	private int indentLevel;
+	/** the indentation string */
     private String indentString = "\t";
+	/** if true, display verbose messages */
     private boolean verbose;
 
 	/**
@@ -53,6 +56,7 @@ public class XmlWriter extends BufferedWriter {
 	 * The caller decides about the XML definition line(s), e.g. a XML schema, or a DTD.
 	 *
 	 * @param fileName 		the file name of the XML file
+	 * @param xmlDefinitonLine 		a definition line for the XML file, like version/standalone etc.
 	 * @param verbose 		true if the XML writer should create verbose information in the XML file to make it more
 	 * 						human readable, false otherwise
 	 * @throws IOException an I/O exception has occurred
@@ -135,7 +139,7 @@ public class XmlWriter extends BufferedWriter {
 	 * Writes a XML comment.
 	 *
 	 * @param comment			the text of the comment
-	 * @throws IOException
+	 * @throws IOException in case of unexpected exceptions
 	 */
 	public void writeComment(String comment) throws IOException {
 
@@ -145,7 +149,7 @@ public class XmlWriter extends BufferedWriter {
     /**
      * Writes an XML comment ending.
      *
-	 * @throws IOException
+	 * @throws IOException in case of unexpected exceptions
 	 */
 	public void writeEndComment() throws IOException {
 
@@ -156,7 +160,7 @@ public class XmlWriter extends BufferedWriter {
      * Write an ending tag of a XML item.
      *
      * @param   tag         the name of the tag
-     * @throws  IOException
+     * @throws  IOException in case of unexpected exceptions
      */
 	public void writeEndTag(String tag) throws IOException {
 
@@ -166,9 +170,10 @@ public class XmlWriter extends BufferedWriter {
     /**
      * Write an int[] with a given tag.
      *
-	 * @param tag				the tag enclosing the integers (e.g. "id" for <id>12345</id>)
-	 * @param ints
-	 * @throws IOException
+	 * @param tag				the tag enclosing the integers (e.g. "id" for 
+	 * 							{@literal <}id{@literal >}12345{@literal <}/id{@literal >})
+	 * @param ints				the int array
+	 * @throws IOException in case of unexpected exceptions
 	 */
 	public void writeArray(String tag, int[] ints) throws IOException {
 
@@ -183,7 +188,7 @@ public class XmlWriter extends BufferedWriter {
 	 * @param xmlTag		the name of the XML tag
 	 * @param ints			the array of integers
 	 * @param oneLine		if true, write in one line without making newlines
-	 * @throws IOException
+	 * @throws IOException in case of unexpected exceptions
 	 */
 	public void writeIds(String xmlTag, int[] ints, boolean oneLine) throws IOException {
 
@@ -206,7 +211,7 @@ public class XmlWriter extends BufferedWriter {
      * Writes an indented XML end tag.
      *
      * @param   tag         the name of the tag
-     * @throws  IOException
+     * @throws  IOException in case of unexpected exceptions
      */
 	public void writeIndentedEndTag(String tag) throws IOException {
 
@@ -219,8 +224,8 @@ public class XmlWriter extends BufferedWriter {
      *
      * @param tag         	the name of the tag
 	 * @param ints			the array
-	 * @param verbose
-	 * @throws IOException
+	 * @param verbose		true to wrief verbose messages
+	 * @throws IOException in case of unexpected exceptions
 	 */
 	public void writeIndentedIds(String tag, int[] ints, boolean verbose) throws IOException {
 
@@ -237,7 +242,7 @@ public class XmlWriter extends BufferedWriter {
      * Writes an indented XML start tag.
      *
      * @param   tag         the name of the tag
-     * @throws  IOException
+     * @throws  IOException in case of unexpected exceptions
      */
 	public void writeIndentedStartTag(String tag) throws IOException {
 
@@ -250,7 +255,7 @@ public class XmlWriter extends BufferedWriter {
      *
      * @param   tag         the name of the tag
      * @param   value       the value of the XML tag
-     * @throws  IOException
+     * @throws  IOException in case of unexpected exceptions
      */
 	public void writeIndentedXmlElement(String tag, String value) throws IOException {
 
@@ -261,7 +266,7 @@ public class XmlWriter extends BufferedWriter {
     /**
      * Writes  indentation level times the indentation string.
      *
-     * @throws IOException
+     * @throws IOException in case of unexpected exceptions
      */
 	public void writeIndents() throws IOException {
 
@@ -274,7 +279,8 @@ public class XmlWriter extends BufferedWriter {
      * Writes an indented text and a line separator.
      * Note: used for comment lines.
      *
-	 * @throws IOException
+     * @param   text         the text
+	 * @throws IOException in case of unexpected exceptions
 	 */
 	public void writelnIndentedText(String text) throws IOException {
 
@@ -286,7 +292,7 @@ public class XmlWriter extends BufferedWriter {
     /**
      * Writes an XML comment ending and a line separator.
      *
-	 * @throws IOException
+	 * @throws IOException in case of unexpected exceptions
 	 */
 	public void writelnEndComment() throws IOException {
 
@@ -298,7 +304,7 @@ public class XmlWriter extends BufferedWriter {
      * Write an ending tag of a XML item and a line separator.
      *
      * @param   tag         the name of the tag
-     * @throws  IOException
+     * @throws  IOException in case of unexpected exceptions
      */
 	public void writelnEndTag(String tag) throws IOException {
 
@@ -310,7 +316,7 @@ public class XmlWriter extends BufferedWriter {
      * Writes an indented line with a XML comment and a line separator.
      *
 	 * @param comment			the text of the comment
-	 * @throws IOException
+	 * @throws IOException in case of unexpected exceptions
 	 */
 	public void writelnIndentedComment(String comment) throws IOException {
 
@@ -322,7 +328,7 @@ public class XmlWriter extends BufferedWriter {
     /**
      * Writes an indented XML comment ending and a line separator.
      *
-	 * @throws IOException
+	 * @throws IOException in case of unexpected exceptions
 	 */
 	public void writelnIndentedEndComment() throws IOException {
 
@@ -335,7 +341,7 @@ public class XmlWriter extends BufferedWriter {
      * Writes an indented XML end tag and a line separator.
      *
      * @param   tag         the name of the tag
-     * @throws  IOException
+     * @throws  IOException in case of unexpected exceptions
      */
 	public void writelnIndentedEndTag(String tag) throws IOException {
 
@@ -347,7 +353,7 @@ public class XmlWriter extends BufferedWriter {
 	/**
      * Writes an indented XML comment opening and a line separator.
      *
-	 * @throws IOException
+	 * @throws IOException in case of unexpected exceptions
 	 */
 	public void writelnIndentedStartComment() throws IOException {
 
@@ -360,7 +366,7 @@ public class XmlWriter extends BufferedWriter {
      * Writes an indented XML start tag and a line separator.
      *
      * @param   tag         the name of the tag
-     * @throws  IOException
+     * @throws  IOException in case of unexpected exceptions
      */
 	public void writelnIndentedStartTag(String tag) throws IOException {
 
@@ -374,7 +380,7 @@ public class XmlWriter extends BufferedWriter {
      *
      * @param   tag         the name of the tag
      * @param   value       the value of the XML tag
-     * @throws  IOException
+     * @throws  IOException in case of unexpected exceptions
      */
 	public void writelnIndentedXmlElement(String tag, String value) throws IOException {
 
@@ -387,7 +393,7 @@ public class XmlWriter extends BufferedWriter {
      * Indents and Writes an indented line with a complete XML end tag and a line separator, indents less afterwards.
      *
      * @param   tag         the name of the tag
-     * @throws  IOException
+     * @throws  IOException in case of unexpected exceptions
      */
 	public void writelnObjIndentedEndTag(String tag) throws IOException {
 
@@ -399,7 +405,7 @@ public class XmlWriter extends BufferedWriter {
      * Writes an indented line with a complete XML end tag and a line separator, unindents afterwards.
      *
      * @param   tag         the name of the tag
-     * @throws  IOException
+     * @throws  IOException in case of unexpected exceptions
      */
 	public void writelnObjIndentedStartTag(String tag) throws IOException {
 
@@ -410,7 +416,7 @@ public class XmlWriter extends BufferedWriter {
     /**
      * Writes an XML comment opening and a line separator.
      *
-	 * @throws IOException
+	 * @throws IOException in case of unexpected exceptions
 	 */
 	public void writelnStartComment() throws IOException {
 
@@ -421,7 +427,7 @@ public class XmlWriter extends BufferedWriter {
     /**
      * Writes an XML comment opening.
      *
-	 * @throws IOException
+	 * @throws IOException in case of unexpected exceptions
 	 */
 	public void writeStartComment() throws IOException {
 
@@ -432,7 +438,7 @@ public class XmlWriter extends BufferedWriter {
      * Writes a XML start tag.
      *
      * @param   tag         the name of the tag
-     * @throws  IOException
+     * @throws  IOException in case of unexpected exceptions
      */
 	public void writeStartTag(String tag) throws IOException {
 
@@ -444,7 +450,7 @@ public class XmlWriter extends BufferedWriter {
      *
      * @param   tag         the name of the tag
      * @param   value       the value of the XML tag
-     * @throws  IOException
+     * @throws  IOException in case of unexpected exceptions
      */
 	public void writeXmlElement(String tag, String value) throws IOException {
 

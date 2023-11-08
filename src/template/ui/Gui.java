@@ -27,8 +27,10 @@ import template.*;
  */
 public class Gui {
 	
-	public static final int COMP_HEIGHT = 21;		// the default component height within the GUI
-	public static final int CHAR_WIDTH = 15;		// an assumed character width in a text component (for width estimations)
+	/** the default component height within the GUI */
+	public static final int COMP_HEIGHT = 21;
+	/** an assumed character width in a text component (for width estimations) */
+	public static final int CHAR_WIDTH = 15;
 
 	/**
 	 * Deny external construction.
@@ -80,9 +82,9 @@ public class Gui {
 	/**
 	 * Convenience method: show an error dialog.
 	 * 
-	 * @param parent
-	 * @param message
-	 * @param title
+	 * @param parent		the parent component
+	 * @param message		the message
+	 * @param title			the title
 	 */
 	public static void errorDlg(Component parent, String message, String title) {
 		
@@ -92,9 +94,9 @@ public class Gui {
 	/**
 	 * Convenience method: show an info dialog.
 	 * 
-	 * @param parent
-	 * @param message
-	 * @param title
+	 * @param parent		the parent component
+	 * @param message		the message
+	 * @param title			the title
 	 */
 	public static void infoDlg(Component parent, String message, String title) {
 		
@@ -104,9 +106,9 @@ public class Gui {
 	/**
 	 * Convenience method: show a warning dialog.
 	 * 
-	 * @param parent
-	 * @param message
-	 * @param title
+	 * @param parent		the parent component
+	 * @param message		the message
+	 * @param title			the title
 	 */
 	public static void warnDlg(Component parent, String message, String title) {
 		

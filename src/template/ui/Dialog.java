@@ -23,16 +23,17 @@ import javax.swing.*;
 
 /**
  * A JDialog specimen.
- * <p>
  */
+@SuppressWarnings("serial")
 public class Dialog extends JDialog {
 
+	/** the parent frame of the dialog */
 	private JFrame parentFrame;
 
 	/**
 	 * Create the dialog and show it.
 	 * 
-	 * @param parentFrame
+	 * @param parentFrame		the parent frame of the dialog
 	 */
 	public Dialog(JFrame parentFrame) {
 
@@ -82,6 +83,11 @@ public class Dialog extends JDialog {
 	 */
 	public class TxtFocusListener extends FocusAdapter {
 	
+		/**
+		 * A focus event has happened.
+		 * 
+	 	* @param e			the event
+		 */
 		public void focusGained(FocusEvent e) {
 			
 			((JTextField) e.getSource()).selectAll();

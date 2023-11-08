@@ -26,8 +26,11 @@ import java.util.*;
  */
 public class Util {
 	
+	/** a predefined decimal format */
 	public static final DecimalFormat DECIMAL_FORMAT2 = new DecimalFormat("0.00");
+	/** a predefined date format */
 	public static final SimpleDateFormat DATE_FORMAT1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+	/** a predefined decimal format */
 	public static final DecimalFormat PERCENT_FORMAT = new DecimalFormat("####0.00");
 	
 	/**
@@ -108,7 +111,7 @@ public class Util {
 	/**
 	 * Creates a <code>FilenameFilter</code> for files that start with a given prefix.
 	 * 
-	 * @param fileNamePrefix						the prefix a file has to start with
+	 * @param fileNamePrefix					the prefix a file has to start with
 	 * @return the <code>FilenameFilter</code>
 	 */
 	public static FilenameFilter createFilenameFilterStartingWith(final String fileNamePrefix) {
@@ -124,7 +127,7 @@ public class Util {
 	/**
 	 * Returns a String array for all files in a directory that start with a given prefix.
 	 * 
-	 * @param parentDirectory
+	 * @param parentDirectory				the parent directory	
 	 * @param fileNamePrefix				the prefix a file has to start with
 	 * @return the String array with the file names
 	 */
@@ -143,8 +146,8 @@ public class Util {
 	 * Returns String of all integer elements of an List, separated by
 	 * another (separation) String (e.g. a space).
 	 * 
-	 * @param list
-	 * @param separator
+	 * @param list				the List of the integer elements
+	 * @param separator			a separator
 	 * @return the resulting string
 	 */
 	public static String listToString(java.util.List<? extends Object> list, String separator) {
@@ -185,23 +188,6 @@ public class Util {
 		}
 		return s;
 	}
-
-	/**
-	 * Reads an input file into a String object.
-	 *
-	 * @param inputFileName
-	 * @param charBufferSize				the size of a (very large) temporary input buffer
-	 * @return a string containing the contents of the whole input file
-	 * @throws IOException on errors reading the input file
-	 */
-	public static String readFileIntoString(String inputFileName, int charBufferSize) throws IOException {
-
-		BufferedReader in = new BufferedReader(new FileReader(inputFileName));
-		char[] inputCharArr = new char[charBufferSize];
-		int size = in.read(inputCharArr, 0, charBufferSize);
-		in.close();
-		return new String(inputCharArr, 0, size);
-	}
     
     /**
      * Reads the contents of an URL into a String object.<br/>
@@ -209,7 +195,7 @@ public class Util {
      * 
      * @param urlString		the URL to read from
      * @return the contents of the URL
-     * @throws Exception
+     * @throws Exception in case of unexpected exceptions
      */
     public static String readFromUrl(String urlString) throws Exception {
         
@@ -229,9 +215,9 @@ public class Util {
 	 * Renames a file to a backup file, if the file exists .
 	 * If an old backup file exists already, it will be deleted before renaming the file.
 
-	 * @param filename
-	 * @param backupFilename
-	 * @throws IOException
+	 * @param filename				the name of the file to rename
+	 * @param backupFilename		the name of the backup file
+	 * @throws IOException in case of exception
 	 */
 	public static void renameToBackupFile(String filename, String backupFilename) throws IOException {
 
@@ -330,7 +316,7 @@ public class Util {
 	 * by extending it with spaces.<br/>
 	 * Use: create output with fix-sized columns.
 	 * 
-	 * @param text
+	 * @param text			the string
 	 * @param length		length to expand or cut
 	 * @return the resulting string
 	 */
@@ -349,7 +335,7 @@ public class Util {
     /**
      * Returns a string of % from a double value.
      * 
-     * @param value
+     * @param value			the double value
      * @return a string of %
      */
     public static String toStringPercent(double value) {
@@ -361,9 +347,9 @@ public class Util {
 	/**
 	 * Writes the content of a String object to a file.
 	 * 
-	 * @param fileName
+	 * @param fileName			the file to write on
 	 * @param content			the content of the file to write
-	 * @throws IOException
+	 * @throws IOException in case of unexpected exceptions
 	 */
 	public void writeFile(String fileName, String content) throws IOException {
 

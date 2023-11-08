@@ -24,7 +24,7 @@ public class Usage {
 	/**
 	 * Prints a usage of this program and exits.
 	 * 
-	 * @param exitCode
+	 * @param exitCode		the exit code of System.exit(exitCode)
 	 */
 	public static void exit(int exitCode) {
 		

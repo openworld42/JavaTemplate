@@ -28,19 +28,24 @@ import template.ui.*;
  */
 public class Main {
 
-	public static final String APP_NAME = "XXX";
+	/** the name of the application */
+	public static final String APP_NAME = "XXXyourNameXXX";
 
-	private static Main instance;				// the one and only instance of this application
+	/** the one and only (singleton) instance of this application */
+	private static Main instance;
 	
-	private CommandLineArgs args;				// command line arguments, if needed
-	private AppProperties properties; 			// application properties (e.g. a config file), if needed
-	private boolean isVerbose; 					// verbose messages to System.out
+	/** command line arguments, if any */
+	private CommandLineArgs args;
+	/** application properties (e.g. a config file), if needed */
+	private AppProperties properties;
+	/** if true, verbose messages are displayed on System.out */
+	private boolean isVerbose;
 
 	/**
 	 * Construction.
 	 * 
-	 * @param arguments			command line arguments
-	 * @throws Exception
+	 * @param arguments			command line arguments, if any
+	 * @throws Exception in case of unexpected exceptions
 	 */
 	public Main(String[] arguments) throws Exception {
 
@@ -107,7 +112,7 @@ public class Main {
 	/**
 	 * Gets a property.
 	 * 
-	 * @param key
+	 * @param key			the property key
 	 * @return the property value
 	 */
 	public static String getProperty(String key) {
@@ -118,7 +123,7 @@ public class Main {
 	/**
 	 * Gets an boolean property (a flag).
 	 * 
-	 * @param key
+	 * @param key			the property key
 	 * @return true id the value is "true", false otherwise
 	 */
 	public static boolean getPropertyBool(String key) {
@@ -129,7 +134,7 @@ public class Main {
 	/**
 	 * Gets an integer property.
 	 * 
-	 * @param key
+	 * @param key			the property key
 	 * @return the integer value
 	 */
 	public static int getPropertyInt(String key) {
@@ -158,7 +163,7 @@ public class Main {
 	/**
 	 * Main entry.
 	 * 
-	 * @param args		command line arguments
+	 * @param args		command line arguments, if any
 	 */
 	public static void main(String[] args) {
 

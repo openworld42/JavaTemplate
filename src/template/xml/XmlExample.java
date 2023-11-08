@@ -39,22 +39,33 @@ import org.xml.sax.ext.*;
 public class XmlExample {
 
 	
-	static enum State {										// for XmlReadHandler, state of parsing items
+	/** state of parsing items, for XmlReadHandler  */
+	static enum State {		
+		/** parsing item state */
 		DB,
+		/** parsing item state */
 		OBJ_A,
+		/** parsing item state */
 		OBJ_B,
+		/** parsing item state */
 		MAP,
 	}
 	
+	/** the name of the XML file */
 	public static final String FILENAME = "myExample.xml";			
-	private static final String XML_DATA = "myxmldata";				// enclosing XML tag
+	/** an enclosing XML tag */
+	private static final String XML_DATA = "myxmldata";
 	
 	// the objects to write and parse back
+	/** example object */
 	private ObjectA objA;
+	/** example map */
 	private XmlWrappedHashMap map;
 
 	/**
 	 * Construction, write and XML file from two objects and a wrapped HashMap and read it back.
+	 * 
+	 * @throws Exception in case of an unexpected exception
 	 */
 	public XmlExample() throws Exception {
 
@@ -96,11 +107,17 @@ public class XmlExample {
         System.out.println("ok, thats what we expected ...");
 	}
 	
+	/**
+	 * @param map		the map to set
+	 */
 	public void setMap(XmlWrappedHashMap map) {
 		
 		this.map = map;
 	}
 	
+	/**
+	 * @param objA		set object A (example)
+	 */
 	public void setObjA(ObjectA objA) {
 	
 		this.objA = objA;
@@ -118,22 +135,39 @@ public class XmlExample {
 	
     // ****************   inner classes, just to keep everything in one file for demonstration   ************************
 
-	/** Container for an int, a String and ObjectB */
+	/** Example container for an int, a String and ObjectB */
 	class ObjectA implements XmlWritable {
 		
+		/** key */
 		public static final String XML_ID = "id";
+		/** key */
 		public static final String XML_TEXT = "text";
 		
+		/** change the text */
 		private int id;
+		/** change the text */
 		private String text;
+		/** change the text */
 		private ObjectB b;				// this class owns another instance of ObjectB
 		
+		/**
+		 * @param id			example, change the text 
+		 * @param text			example, change the text 
+		 * @param objectB		example, change the text 
+		 */
 		public ObjectA(int id, String text, ObjectB objectB) {		// needed for XmlReadHandler construction
 			this.id = id;
 			this.text = text;
 			b = objectB;
 		}
 
+		/**
+		 * Writes a piece of XML.
+		 *
+		 * @param xmlwriter			the writer
+		 * @param verbose			a verbose flag 
+		 * @throws IOException in case of an unexpected exception
+		 */
 		public void toXml(XmlWriter xmlwriter, boolean verbose) throws IOException {
 			String clazz = this.getClass().getSimpleName();
 			xmlwriter.writelnObjIndentedStartTag(clazz);
@@ -147,17 +181,32 @@ public class XmlExample {
 	/** Container for an int and a String */
 	class ObjectB implements XmlWritable {
 		
+		/** key */
 		public static final String XML_ID = "id";
+		/** key */
 		public static final String XML_ANOTHER_TEXT = "anothertext";
 		
+		/** change the text */
 		private int id ;
+		/** change the text */
 		private String anothertext;
 		
+		/**
+		 * @param id					example, change the text 
+		 * @param anothertext			example, change the text 
+		 */
 		public ObjectB(int id, String anothertext) {
 			this.id = id;
 			this.anothertext = anothertext;
 		}
 
+		/**
+		 * Writes a piece of XML.
+		 *
+		 * @param xmlwriter			the writer
+		 * @param verbose			a verbose flag 
+		 * @throws IOException in case of an unexpected exception
+		 */
 		public void toXml(XmlWriter xmlwriter, boolean verbose) throws IOException {
 			String clazz = this.getClass().getSimpleName();
 			xmlwriter.writelnObjIndentedStartTag(clazz);
@@ -171,14 +220,23 @@ public class XmlExample {
 	}
 	
 	/** A wrapped HashMap to write it to a XML file, we can also wrap collections or other objects */
+	@SuppressWarnings("serial")
 	class XmlWrappedHashMap extends HashMap<String, String> {
 		
-		private static final long serialVersionUID = 1L;
-		
+		/** key */
 		public static final String XML_KEY = "key";
+		/** key */
 		public static final String XML_VALUE = "value";
+		/** key */
 		public static final String XML_ELEMENT = "mapelement";
 
+		/**
+		 * Writes a piece of XML.
+		 *
+		 * @param xmlwriter			the writer
+		 * @param verbose			a verbose flag 
+		 * @throws IOException in case of an unexpected exception
+		 */
 		public void toXml(XmlWriter xmlwriter, boolean verbose) throws IOException {
 			String clazz = this.getClass().getSimpleName();
 			xmlwriter.writelnObjIndentedStartTag(clazz);
@@ -198,27 +256,46 @@ public class XmlExample {
 	 */
 	class XmlReadHandler extends DefaultHandler2 {	
 
+		/** the example */
 		private XmlExample main;
 		
 		// we need the class names (best for debugging, if needed)
+		/** class name */
 		private String xmlA = XmlExample.ObjectA.class.getSimpleName();		
+		/** class name */
 		private String xmlB = XmlExample.ObjectB.class.getSimpleName();
+		/** the Map */
 		private String xmlHashMap = XmlWrappedHashMap.class.getSimpleName();
 		
-		private State state = null;								// the state of parsing a top tag element
-	    private Stack<State> stateStack = new Stack<State>();	// a stack of states during parsing
-	    private String lastStr;									// the last data string parsed
+		/** the state of parsing a top tag element */
+		private State state = null;
+		/** a stack of states during parsing */
+	    private Stack<State> stateStack = new Stack<State>();
+		/** the last data string parsed */
+	    private String lastStr;
 	    // we need instances for every parsed object or variable
+		/** instance of parsed object or variable */
 	    private int idA;
+		/** instance of parsed object or variable */
 	    private String text;
+		/** instance of parsed object or variable */
 	    private int idB;
+		/** instance of parsed object or variable */
 	    private String anothertext;
+		/** instance of parsed object or variable */
 	    private ObjectA objectA;
+		/** instance of parsed object or variable */
 	    private ObjectB objectB;
+		/** instance of parsed object or variable */
 	    private XmlWrappedHashMap map;
+		/** instance of parsed object or variable */
 	    private String key;										// wrapped HashMap
+		/** instance of parsed object or variable */
 	    private String value;
 
+		/**
+		 * @param example		the XML example
+		 */
 		public XmlReadHandler(XmlExample example) {
 			super();
 			this.main = example;
