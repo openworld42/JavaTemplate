@@ -18,10 +18,10 @@ where **xxx** is the current version. You need a Java runtime/JDK installed (**L
 I have been using/growing this for fast setups of my own projects over years, starting with 
 500-1000 (or even 2500) lines of code from the beginning, concentrating on the project needs - and not 
 repeat the somewhat boring tasks. I tried to keep it simple but functional, 
-thus reducing unneccessary complexity.
+thus reducing unnecessary complexity.
 
-And yes, it's all source under your hood/needs, not a framework to live with. 
-It's a template, you modify it, delete the unneccessary parts, and start with some infrastructure from the very beginning. Use the saved time for other things you like.
+And yes, it's all source under your hood/needs, not a framework to live with, and no dependencies. 
+It's a template, you modify it, delete the unnecessary parts, and start with some infrastructure from the very beginning. Use the saved time for other things you like.
 
 ### Javadocs / API
 Download (or clone) the JavaTemplate project, if downloaded as a zip file extract it. Open the API with your browser:
@@ -37,11 +37,11 @@ The **API** contains:
 <ul>
 	<li><b>Main</b>: an application entry class catching all unexpected Exceptions, starting a GUI (can be deleted), with logging and 
 		command line option parsing. Properties (like last window positions) are included.</li>
-	<li><b>AppProperties</b>: application specific property object (e.g. for window sizes, small items to persist).
+	<li><b>AppProperties</b>: application specific property object (e.g. for window sizes and small items to persist).
 		Default properties are automatically stored as XML or key/value files and can be read back easily at the next application start.</li>
 	<li><b>CommandLineArgs</b>: a specimen for command line options and the parsing.</li>
 	<li><b>Usage</b>: the usual -h --help output and other options specimen (documentation is very often underestimated ;-).</li>
-	<li><b>Logger</b>: a simple logging class (yes, I know Log4J, of course), but I like the simple things under my hood. 
+	<li><b>Logger</b>: a simple logging class (yes, I know Log4J, of course), but I like simple things under my hood. 
 		One needs rarely the full complexity (if so, it is easy to start with Logger and use it as a wrapper when something is going to get big).</li>
 	<li><b>Version</b>: a simple version (release) class for version management.</li>
 	<li><b>Msg</b> and <b>Message</b>: a good start for a possible distribution of other languages/labels/tags, with fair cost at 
