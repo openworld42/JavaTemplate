@@ -13,7 +13,8 @@ To run it: download the **templateVxxx.jar** file and call it from the command l
 
 **java -jar templateVxxx.jar**
 
-where **xxx** is the current version. You need a Java runtime/JDK installed (**Linux**: simply use your package manager, **Windows/macOS/others**: download and install JDK from [here](https://openjdk.java.net/)). 
+where **xxx** is the current version. You need a Java runtime/JDK installed (at least version 17 - check on command line using **java -version**).<br/>
+To get it: **Linux**: simply use your package manager, **Windows/macOS/others**: download and install JDK from [here](https://openjdk.java.net/).<br/> 
 
 I have been using/growing this for fast setups of my own projects over years, starting with 
 500-1000 (or even 2500) lines of code from the beginning, concentrating on the project needs - and not 
