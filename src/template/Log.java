@@ -75,11 +75,11 @@ public class Log {
 	}
 
 	/**
-	 * Overwrite this method to change the logging prefix for log entries.
+	 * Creates the log entries.
 	 * 
 	 * @param record 		the <code>LogRecord</code> to log
 	 * 
-	 * @return the prefix of a log entry
+	 * @return the log entry
 	 */
 	public static String createLogEntry(LogRecord record) {
 
@@ -90,6 +90,7 @@ public class Log {
 			sb.append(' ');
 		}
 		sb.append(record.getMessage());
+		sb.append(lineSep);
 		return sb.toString();
 	}
 
