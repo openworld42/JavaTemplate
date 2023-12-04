@@ -34,7 +34,7 @@ import java.util.*;
  * @author Heinz Silberbauer
  */
 //public class Logger extends java.util.logging.Logger {
-public class Logger {
+public class Log {
 
 	/** using a large buffer size for logging*/
 	public static final int BUFFER_SIZE = 8 * 1024;	// make it big if writing large files ...
@@ -44,7 +44,7 @@ public class Logger {
 	public static final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss ");
 
 	/** the logger singleton instance */
-	private static final Logger instance = new Logger();
+	private static final Log instance = new Log();
 
 	/** the current number of logging messages */
 	private static int logCount;
@@ -61,8 +61,18 @@ public class Logger {
 	/**
 	 * Deny external construction, singleton.
 	 */
-	private Logger() {
+	private Log() {
 
+		
+		java.util.logging.Logger logger = java.util.logging.Logger.getLogger("");
+		
+		logger.info("abc");
+		
+//		logger.log(Level.WARNING, "abc");
+		
+
+		
+		
 	}
 
 	/**
@@ -224,7 +234,7 @@ public class Logger {
 
 		try {
 			writer = new BufferedWriter(new FileWriter(logFilename), BUFFER_SIZE);
-			Logger.logFilename = logFilename;
+			Log.logFilename = logFilename;
 		} catch (IOException e) {
 			e.printStackTrace();
 			throw new RuntimeException("Error initilizing Logger: " + e.getMessage());
@@ -236,7 +246,7 @@ public class Logger {
 	 */
 	public static void logErrorsToConsole(boolean logErrorsToConsole) {
 
-		Logger.logErrorsToConsole = logErrorsToConsole;
+		Log.logErrorsToConsole = logErrorsToConsole;
 	}
 
 	/**

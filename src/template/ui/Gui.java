@@ -61,7 +61,7 @@ public class Gui {
 			});
 		} catch (Exception e) {
 			e.printStackTrace();
-			Logger.exception(e);
+			Log.exception(e);
 		}
 	}
 
