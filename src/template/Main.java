@@ -18,8 +18,6 @@ package template;
 
 import static template.Message.*;			// for short code, using its constants in a short way
 
-import java.lang.System.Logger.*;
-
 import template.ui.*;
 
 /**
@@ -68,7 +66,7 @@ public class Main {
 		// start logging feature (if the application has logging)
 		// do'nt forget to close the logger before stop AND on error exits
 		String logFilename = "log.txt";
-		Log.init(logFilename);
+		Log.init(logFilename);						// you may use a custom Logger as parameter (
 		Log.info("reading configuration file: XXX" );
 
 		// TODO  your stuff
@@ -97,7 +95,7 @@ public class Main {
 		e.printStackTrace();
 		
 		// if there is logging in this project
-		Log.error("Exception caught, exit", e);
+		Log.severe("Exception caught, exit", e);
 		Log.close();
 		
 		System.exit(1);			// in any case, indicate an unexpected exception exit at least with an error code
@@ -189,7 +187,7 @@ public class Main {
             System.out.println("\n*****  Exception caught, exit: " + e);
             e.printStackTrace();
             
-			Log.error("Unexpected exception, exit", e);		// if there is logging in this project OR do
+			Log.severe("Unexpected exception, exit", e);		// if there is logging in this project OR do
 			
 			// generic error exit (so we don't forget anything, there are many possibilities to fail in a program)
 			exitOnException(e);
@@ -197,7 +195,7 @@ public class Main {
 			// if there is logging in this project and you don't use Main.exitOnException(e), you have to close the Logger
 //			Logger.close();
 			
-			System.exit(2);		// needed for GUI
+			System.exit(2);		// exit() is needed for GUI
 		}
         
         // if there is logging in this project, you have to close the Logger
