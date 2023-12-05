@@ -9,9 +9,9 @@ need the full **JavaTemplate**.
 Since it is a template for repeated needs during project setup, it does almost 
 nothing by itself, but runs a simple GUI (Graphical User Interface) to demonstrate its use.
 
-To run it: download the **templateVxxx.jar** file and call it from the command line using
+To run it: download the **template_vx.x.x.jar** file and call it from the command line using
 
-**java -jar templateVx.x.x.jar**
+**java -jar template_vx.x.x.jar**
 
 where **x.x.x** is the current version. You need a Java runtime/JDK installed (at least version 17 - check on command line using **java -version**).<br/>
 To get it: **Linux**: simply use your package manager, **Windows/macOS/others**: download and install JDK from [here](https://openjdk.java.net/).<br/> 
