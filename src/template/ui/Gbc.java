@@ -99,8 +99,6 @@ import javax.swing.*;
  * </pre>
  *
  * @see java.awt.GridBagConstraints
- *
- * @author Heinz Silberbauer
  */
 @SuppressWarnings("serial")
 public class Gbc extends GridBagConstraints {

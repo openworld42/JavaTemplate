@@ -36,8 +36,6 @@ import java.util.*;
  * Note: to add multi-language support later in the project, just let getMessagesEnumMap()
  * return another EnumMap with the messages of this language (read from a
  * property file or similar).
- * 
- * @author Heinz Silberbauer
  */
 public enum Message {
 
