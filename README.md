@@ -11,9 +11,9 @@ nothing by itself, but runs a simple GUI (Graphical User Interface) to demonstra
 
 To run it: download the **templateVxxx.jar** file and call it from the command line using
 
-**java -jar templateVxxx.jar**
+**java -jar templateVx.x.x.jar**
 
-where **xxx** is the current version. You need a Java runtime/JDK installed (at least version 17 - check on command line using **java -version**).<br/>
+where **x.x.x** is the current version. You need a Java runtime/JDK installed (at least version 17 - check on command line using **java -version**).<br/>
 To get it: **Linux**: simply use your package manager, **Windows/macOS/others**: download and install JDK from [here](https://openjdk.java.net/).<br/> 
 
 I have been using/growing this for fast setups of my own projects over years, starting with 
@@ -74,8 +74,8 @@ Last, but not least, don't forget the <b>GUI (Graphical User Interface)</b>:
 	<li><b>Look&Feel</b>: is configurable, or can be set to a fixed one</li>
 	<li><b>MainView</b> (swing based): a main window specimen with almost everything to delete out if not needed. 
 		Contains code snippets for ToolBar, Menu, status line, some widgets, listeners, action handling/dispatching, focus, window closing actions,
-		simple dialog examples (file chooser, question input, etc.), and yes, layout (e.g. an easy way to use GrindBagLayout!).</li>
-	<li><b>Gbc</b>: ride the GridBagConstraints horse for GrindBagLayout in a kingsman way - short/fast learning curve, 
+		simple dialog examples (file chooser, question input, etc.), and yes, layout (e.g. an easy way to use GridBagLayout!).</li>
+	<li><b>Gbc</b>: ride the GridBagConstraints horse for GridBagLayout in a kingsman way - short/fast learning curve, 
 		index placed (grid x/y placement), automated insets for a good look/feel of the widgets, anchoring (e.g. "NW t" for 
 		north-west anchor with automated (wider) inset at the top), 
 		filler() to drag/push widgets and more: take a look for its use in MainView. No drawing tools needed anymore.</li>
