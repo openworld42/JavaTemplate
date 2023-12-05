@@ -42,7 +42,7 @@ The **API** contains:
 		Default properties are automatically stored as XML or key/value files and can be read back easily at the next application start.</li>
 	<li><b>CommandLineArgs</b>: a specimen for command line options and the parsing.</li>
 	<li><b>Usage</b>: the usual -h --help output and other options specimen (documentation is very often underestimated ;-).</li>
-	<li><b>Logger</b>: a simple logging class (yes, I know Log4J, of course), but I like simple things under my hood. 
+	<li><b>Logger</b>: a simple logging class, may be upgraded later for another or more complex logging. 
 		One needs rarely the full complexity (if so, it is easy to start with Logger and use it as a wrapper when something is going to get big).</li>
 	<li><b>Version</b>: a simple version (release) class for version management.</li>
 	<li><b>Msg</b> and <b>Message</b>: a good start for a possible distribution of other languages/labels/tags, with fair cost at 

@@ -3,6 +3,13 @@
 
 Details to start with: [README.md](https://github.com/openworld42/JavaTemplate/blob/master/README.md)
 
+## v1.2.0
+
+### Fixes
+### Features/Enhancements
+
+* Changed Logger to use the system logger by default
+
 ## v1.1.0
 
 ### Fixes

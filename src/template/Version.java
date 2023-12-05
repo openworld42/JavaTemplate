@@ -27,9 +27,9 @@ public class Version {
 	/** the major version number */
 	public static final int MAJOR = 1;
 	/** the minor version number */
-	public static final int MINOR = 0;
+	public static final int MINOR = 2;
 	/** the release version number */
-	public static final int RELEASE = 1;
+	public static final int RELEASE = 0;
 
 	/**
 	 * No external construction.
@@ -49,7 +49,7 @@ public class Version {
 	}
 
 	/**
-	 * Returns the major version number (eg the 2 of "2.0.13").
+	 * Returns the major version number (e.g. the 2 of "2.0.13").
 	 *
 	 * @return the major version number
 	 */
@@ -59,7 +59,7 @@ public class Version {
 	}
 
 	/**
-	 * Returns the minor version number (eg the 0 of "2.0.13").
+	 * Returns the minor version number (e.g. the 0 of "2.0.13").
 	 *
 	 * @return the minor version number
 	 */
@@ -69,7 +69,7 @@ public class Version {
 	}
 
 	/**
-	 * Returns the release version number (eg the 13 of "2.0.13").
+	 * Returns the release version number (e.g. the 13 of "2.0.13").
 	 *
 	 * @return the release version number
 	 */
