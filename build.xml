@@ -1,10 +1,10 @@
-<project name="MyProject" default="dist" basedir=".">
+<project name="JavaTemplate" default="dist" basedir=".">
 	<description>
 	  
 	Ant build file for JavaTemplate
 	
 	To build: 
-		ant						in directory quemujuicy, where build.xml exists
+		ant						start in directory where the file build.xml is located
 		ant clean				cleanup the build fileset
 		
 	results are in the dist and build directories
@@ -58,7 +58,7 @@
 			<bottom>
 				<![CDATA[Copyright © 2021. All Rights Reserved. Read the license file(s) enclosed. ]]>
 			</bottom>
-			<link href="https://docs.oracle.com/en/java/javase/11/docs/api/"/>
+			<link href="https://docs.oracle.com/en/java/javase/17/docs/api/"/>
 		</javadoc>
 	</target>
 
