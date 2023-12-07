@@ -1,37 +1,50 @@
+<img src="https://github.com/openworld42/JavaTemplate/blob/master/images/DukeWelcome.jpg" 
+alt="JavaUtil" align="right" style="right:40px; top:18px; width:150px; border:none;" />
+
+<br />
+<br />
+<br />
+
 # JavaTemplate
 
-Provides Java(TM) template files as an aid to start a new project. If you like it (better: if it helped you) please give a star - to motivate me. 
+<h3>JavaTemplate serves as an aid for a new project, providing several classes for the startup process.</h3>
 
-To use it, simply copy over the files you want to use and delete the parts or files you don't need.
+[![Maintenance Status](https://badgen.net/badge/maintenance/active/green)](https://github.com/openworld42/JavaTemplate#maintenance-status)
+![dependencies](https://img.shields.io/badge/dependencies-none-orange)
+[![License](https://badgen.net/badge/issue/active/blue)](https://github.com/openworld42/JavaTemplate/issues)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://makeapullrequest.com) 
+
+:airplane: &nbsp; **[Click here if you just want the latest release jar file.](https://github.com/openworld42/JavaTemplate/releases)**
+
+:bicyclist: &nbsp; To use it, download a release or simply copy over the files you want to use and delete the parts or files you don't need.
 Take less files from the [stable 1.0.x branch](https://github.com/openworld42/JavaTemplate/tree/stable-1.0) if you dont 
 need the full **JavaTemplate**.
 
-Since it is a template for repeated needs during project setup, it does almost 
+:classical_building: &nbsp; Since it is a template for repeated needs during project setup, it does almost 
 nothing by itself, but runs a simple GUI (Graphical User Interface) to demonstrate its use.
 
 To run it: download the **template_vx.x.x.jar** file and call it from the command line using
 
 **java -jar template_vx.x.x.jar**
 
-where **x.x.x** is the current version. You need a Java runtime/JDK installed (at least version 17 - check on command line using **java -version**).<br/>
+where **x.x.x** is the current version. You need a Java runtime/JDK installed (at least **version 17** - check on command line using **java -version**).<br/>
 To get it: **Linux**: simply use your package manager, **Windows/macOS/others**: download and install JDK from [here](https://openjdk.java.net/).<br/> 
 
-I have been using/growing this for fast setups of my own projects over years, starting with 
+:thinking: &nbsp; I have been using/growing this for fast setups of my own projects over years, starting with 
 500-1000 (or even 2500) lines of code from the beginning, concentrating on the project needs - and not 
 repeat the somewhat boring tasks. I tried to keep it simple but functional, 
 thus reducing unnecessary complexity.
 
-And yes, it's all source under your hood/needs, not a framework to live with, and no dependencies. 
+:electron: &nbsp; And yes, it's all source under your hood/needs, not a framework to live with, and has no dependencies. 
 It's a template, you modify it, delete the unnecessary parts, and start with some infrastructure from the very beginning. Use the saved time for other things you like.
 
 ### Javadocs / API
-Download (or clone) the JavaTemplate project, if downloaded as a zip file extract it. Open the API with your browser:
 
-**Classes**: docs/allclasses-index.html
+- :coffee: &nbsp; [Javadoc Overview][javadoc_url]<br />
 
-**Packages**: docs/allpackages-index.html
+- :family_woman_girl_boy: &nbsp; [Classes][javadoc_allclasses]<br />
 
-**Overview**: docs/index.html
+- :package: &nbsp; [Packages][javadoc_allpackages]<br />
 
 The **API** contains:
 
@@ -86,11 +99,14 @@ Last, but not least, don't forget the <b>GUI (Graphical User Interface)</b>:
 
 Note: all files are **Apache 2.0 licensed**, therefore could be used as a starter for any other GPL/Apache/FOSS project, as well as the use of individual classes.<br/>
 
-(If you need just the source for a project setup, there is no need to refer to me as an author, but it would be a handsome gesture. 
-I will NOT use my right of legal action for that, it's just my 2 cents for the mankind)</p>
+(If you need just the source for a project setup, there is no need to refer to me as an author, but it would be a handsome gesture. I will NOT use my right of legal action for that, it's just my 2 cents for the mankind.) </p>
 
-Author: Heinz Silberbauer  (You like it? Spend a Github Star to motivate me :whale:)
+Author: Heinz Silberbauer  (You like it? Spend a Github Star to motivate me :ant:)
 
+<!-- Repository -->
 
+[javadoc_url]: https://htmlpreview.github.io/?https://raw.githubusercontent.com/openworld42/JavaTemplate/master/javadoc/index.html
+[javadoc_allclasses]: https://htmlpreview.github.io/?https://raw.githubusercontent.com/openworld42/JavaTemplate/master/javadoc/allclasses-index.html
+[javadoc_allpackages]: https://htmlpreview.github.io/?https://raw.githubusercontent.com/openworld42/JavaTemplate/master/javadoc/allpackages-index.html
 
 
