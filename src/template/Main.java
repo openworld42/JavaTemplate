@@ -29,7 +29,7 @@ import template.ui.*;
 public class Main {
 
 	/** the name of the application */
-	public static final String APP_NAME = "XXXyourNameXXX";
+	public static final String APP_NAME = "Your Project Name";
 
 	/** the one and only (singleton) instance of this application */
 	private static Main instance;
@@ -75,7 +75,7 @@ public class Main {
 
 		// TODO  your stuff
 
-		Util.verbose("Starting GUI ...");		// is displayed on System.out only if the verbose flag is on
+		Util.verbose("Starting the GUI ...");		// is displayed on System.out only if the verbose flag is on
 		
 		// if the application has a GUI, start it now ...
 		System.setProperty("awt.useSystemAAFontSettings","on");	// render fonts in a better way with this property

@@ -38,7 +38,7 @@ public class Dialog extends JDialog {
 	public Dialog(JFrame parentFrame) {
 
 		this.parentFrame = parentFrame;
-		setTitle("my dialog");
+		setTitle("My projects dialog");
 		ImageIcon icon = new ImageIcon("src/images/size24x24/applications-utilities.png");
 		setIconImage(icon.getImage());
 		setModal(true);
@@ -55,8 +55,8 @@ public class Dialog extends JDialog {
 		panel.add(label, new Gbc(0, row));
 		JTextField textField = new JTextField();
 		panel.add(textField, new Gbc(1, row, "W"));
-		textField.setPreferredSize(new Dimension(Gui.CHAR_WIDTH * 2, Gui.COMP_HEIGHT));
-		textField.setText("1");
+		textField.setPreferredSize(new Dimension(Gui.CHAR_WIDTH * 15, Gui.COMP_HEIGHT));
+		textField.setText("another text field");
 		textField.addFocusListener(new TxtFocusListener());
 		row++;
 		// row 1
@@ -86,12 +86,12 @@ public class Dialog extends JDialog {
 		/**
 		 * A focus event has happened.
 		 * 
-	 	* @param e			the event
+	 	 * @param e			the event
 		 */
+		@Override
 		public void focusGained(FocusEvent e) {
 			
 			((JTextField) e.getSource()).selectAll();
 		}
 	}
-
 }

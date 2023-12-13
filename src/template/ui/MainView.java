@@ -68,7 +68,7 @@ public class MainView extends JFrame implements ActionListener {
             }
             public void windowOpened(WindowEvent event) {
                 // delegate to enable subclass to overwrite
-//                onWindowOpened(args);
+//                onWindowOpened();
             }});
             
             
@@ -91,8 +91,8 @@ public class MainView extends JFrame implements ActionListener {
 		if (actionCmd.equals(EXIT)) {
             dispose();
             System.exit(0);
-		} else if (actionCmd.equals("Dialog")) {
-            System.out.println("Dialog pressed\n");
+		} else if (actionCmd.equals("Open a dialog")) {
+            System.out.println("Open a dialog pressed\n");
             new Dialog(this);
 		} else if (actionCmd.equals(XML_EXAMPLE)) {
             System.out.println("Run the XML example ...");
@@ -159,11 +159,15 @@ public class MainView extends JFrame implements ActionListener {
 	 */
 	public JMenuBar createMenu() {
 
-		JMenu menu = new JMenu("XXX Menu");
-		JMenuItem menuItem = createMenuItem(EXIT, true, EXIT);
-		menu.add(menuItem);
 		JMenuBar menuBar = new JMenuBar();
+		JMenu menu = new JMenu("File");
 		menuBar.add(menu);
+		menu.setMnemonic(KeyEvent.VK_F);
+		JMenuItem menuItem = createMenuItem(EXIT, true, KeyEvent.VK_X, EXIT);
+		menu.add(menuItem);
+		menu = new JMenu("Help");
+		menuBar.add(menu);
+		menu.setMnemonic(KeyEvent.VK_H);
 		return menuBar;
     }
 
@@ -172,13 +176,15 @@ public class MainView extends JFrame implements ActionListener {
 	 * 
 	 * @param text					the text of the menu item
 	 * @param enabled				true if the item is enabled, false otherwise
+	 * @param mnemonic				the mnemonic of the menu item
 	 * @param actionCmd				the action command for the event, if clicked
 	 * @return the menu item
 	 */
-	private JMenuItem createMenuItem(String text, boolean enabled, String actionCmd) {
+	private JMenuItem createMenuItem(String text, boolean enabled, int mnemonic, String actionCmd) {
 		
 		JMenuItem menuItem = new JMenuItem(text);
 		menuItem.setEnabled(enabled);
+		menuItem.setMnemonic(mnemonic);
 		menuItem.addActionListener(this);
 		menuItem.setActionCommand(actionCmd);
 		return menuItem;
@@ -193,10 +199,12 @@ public class MainView extends JFrame implements ActionListener {
 		
 		JToolBar statusBar = new JToolBar();
 		statusBar.setFloatable(false);
-		JLabel label1 = new JLabel();
-		label1.setText("now XXX");;
-		statusBar.add(label1);
-		statusBar.addSeparator();
+//		statusBar.setBorder(BorderFactory.createMatteBorder(1, 2, 1, 2, Color.LIGHT_GRAY));
+		statusBar.setMargin(new Insets(1, 3, 1, 1));
+		JLabel label = new JLabel();
+		label.setText("Status: XY");
+		statusBar.add(label);
+//		statusBar.addSeparator();
 		
 //		statusBar.add(anotherComponent);		// TODO  
 
@@ -212,12 +220,12 @@ public class MainView extends JFrame implements ActionListener {
 		
 		JToolBar tb = new JToolBar();
 		tb.setFloatable(false);
+		tb.setMargin(new Insets(1, 3, 1, 1));
 		
 //		buttonNew = createToolBarButton("New", null, KeyEvent.VK_N,
 //			"Start a new XXX", ACTION_NEW, this);
 //		tb.add(buttonNew);
-		tb.addSeparator();
-		JButton btn = createToolBarButton("MyToolBarComp",  null, KeyEvent.VK_M, "Hello, I am a tooltip", "myActionCmd");
+		JButton btn = createToolBarButton("ToolBarButton",  null, KeyEvent.VK_T, "Hello, I am a tooltip", "myToolBarButton");
 //		btn.setEnabled(false);
 
 		tb.add(btn);
@@ -254,7 +262,7 @@ public class MainView extends JFrame implements ActionListener {
 	}
 
 	/**
-	 * GUI init.
+	 * GUI initialization.
 	 * 
 	 * @throws Exception in case of an unexpected exception
 	 */
@@ -295,7 +303,7 @@ public class MainView extends JFrame implements ActionListener {
 		getContentPane().add(statusBar, BorderLayout.SOUTH);
 		
 		centerPanel = new JPanel();
-		centerPanel.setPreferredSize(new Dimension(600, 300));
+		centerPanel.setPreferredSize(new Dimension(800, 500));
 //      centerPanel.setPreferredSize(new Dimension(
 //      	AppCtx.getIntProperty("main.window.size.x"),
 //      	AppCtx.getIntProperty("main.window.size.y")));
@@ -320,9 +328,20 @@ public class MainView extends JFrame implements ActionListener {
 		// label
 		JLabel label = new JLabel("This is a label");
 		centerPanel.add(label, new Gbc(0, 0, 1, 1, 1.0, 0, "H"));
+		// text field
+		JTextField textField = new JTextField();
+		centerPanel.add(textField, new  Gbc(1, 0, "W"));
+		textField.setPreferredSize(new Dimension(Gui.CHAR_WIDTH * 20, Gui.COMP_HEIGHT));
+		textField.setText("Text field");
+		textField.addFocusListener(new FocusAdapter() {
+			@Override
+			public void focusGained(FocusEvent e) {
+				// TODO focus events 
+			}
+		});
+
 		// buttons
-		addButton("XXX", 1, 0, "W t");
-		addButton("Dialog", 1, 1, "W");
+		addButton("Open a dialog", 1, 1, "W");
         centerPanel.add(Gbc.filler(), new Gbc(2, 2, 1, 1, 1.0, 100.0, "S B"));
 
 		exitBtn = addButton(EXIT, 3, 2, "SE b r");

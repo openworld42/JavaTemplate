@@ -28,7 +28,7 @@ import template.*;
 public class Gui {
 	
 	/** the default component height within the GUI */
-	public static final int COMP_HEIGHT = 21;
+	public static final int COMP_HEIGHT = 25;
 	/** an assumed character width in a text component (for width estimations) */
 	public static final int CHAR_WIDTH = 15;
 
