@@ -3,6 +3,13 @@
 
 Details to start with: [README.md](https://github.com/openworld42/JavaTemplate/blob/master/README.md)
 
+## v1.3.0
+
+### Fixes
+### Features/Enhancements
+
+* Changed, prettified and enhanced the GUI
+
 ## v1.2.0
 
 ### Fixes
