@@ -7,7 +7,7 @@ alt="JavaUtil" align="right" style="right:40px; top:18px; width:150px; border:no
 
 # JavaTemplate
 
-<h3>JavaTemplate serves as an aid for a new project, providing several classes for the startup process.</h3>
+<h3>JavaTemplate supports a fast startup of a new project, providing several classes and utilities to start with. </h3>
 
 [![Maintenance Status](https://badgen.net/badge/maintenance/active/green)](https://github.com/openworld42/JavaTemplate#maintenance-status)
 ![dependencies](https://img.shields.io/badge/dependencies-none-orange)
@@ -21,7 +21,7 @@ Take less files from the [stable 1.0.x branch](https://github.com/openworld42/Ja
 need the full **JavaTemplate**.
 
 :classical_building: &nbsp; Since it is a template for repeated needs during project setup, it does almost 
-nothing by itself, but runs a simple GUI (Graphical User Interface) to demonstrate its use.
+nothing by itself, but runs a simple GUI (Graphical User Interface, may be deleted) for the early stages of design and programming.
 
 To run it: download the **template_vx.x.x.jar** file and call it from the command line using
 
